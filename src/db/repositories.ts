@@ -1,7 +1,7 @@
 import { query } from "./pool.js";
 
 /**
- * LEADS
+ * LEADS (lead-first)
  */
 
 export async function findOrCreateLead(params: {
@@ -14,14 +14,14 @@ export async function findOrCreateLead(params: {
     [params.externalId]
   );
 
-  if (existing.rows[0]) {
-    return existing.rows[0];
-  }
+  if (existing.rows[0]) return existing.rows[0];
 
+  // IMPORTANT: territory_status precisa ser NULL na criação
+  // para não violar o check constraint quando franchise_id ainda é NULL.
   const created = await query(
     `
-    INSERT INTO leads (external_id, phone_e164, source)
-    VALUES ($1, $2, $3)
+    INSERT INTO leads (external_id, phone_e164, source, territory_status)
+    VALUES ($1, $2, $3, NULL)
     RETURNING *
     `,
     [params.externalId, params.phoneE164, params.source]
@@ -49,10 +49,7 @@ export async function updateLeadRouting(params: {
   );
 }
 
-export async function updateLeadStatus(
-  leadId: string,
-  status: string
-) {
+export async function updateLeadStatus(leadId: string, status: string) {
   await query(
     `
     UPDATE leads
@@ -79,12 +76,7 @@ export async function insertLeadMessage(params: {
     INSERT INTO lead_messages (lead_id, role, content, stage)
     VALUES ($1, $2, $3, $4)
     `,
-    [
-      params.leadId,
-      params.role,
-      params.content,
-      params.stage ?? null
-    ]
+    [params.leadId, params.role, params.content, params.stage ?? null]
   );
 }
 
@@ -92,10 +84,7 @@ export async function insertLeadMessage(params: {
  * ROUTING
  */
 
-export async function getFranchiseByCityState(
-  cidade: string,
-  estado: string
-) {
+export async function getFranchiseByCityState(cidade: string, estado: string) {
   const result = await query(
     `
     SELECT f.*
@@ -116,11 +105,7 @@ export async function getFranchiseByCityState(
  * JOBS
  */
 
-export async function createJob(
-  type: string,
-  leadId: string,
-  runAt: Date
-) {
+export async function createJob(type: string, leadId: string, runAt: Date) {
   await query(
     `
     INSERT INTO jobs (type, lead_id, run_at)
@@ -130,10 +115,7 @@ export async function createJob(
   );
 }
 
-export async function logJob(
-  jobId: number,
-  message: string
-) {
+export async function logJob(jobId: number, message: string) {
   await query(
     `
     INSERT INTO job_logs (job_id, message)
@@ -142,3 +124,4 @@ export async function logJob(
     [jobId, message]
   );
 }
+
