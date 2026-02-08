@@ -69,11 +69,12 @@ export async function leadsIntake(req: Request, res: Response) {
     String(estado)
   );
 
-  await updateLeadRouting({
-    leadId: lead.id,
-    franchiseId: franchise?.id ?? null,
-    territoryStatus: franchise ? "ativo" : "fallback"
-  });
+
+await updateLeadRouting({
+  leadId: lead.id,
+  franchiseId: franchise?.id ?? null
+});
+
 
   return res.json({
     ok: true,
