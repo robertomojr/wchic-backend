@@ -14,6 +14,8 @@ import { podioExportApps } from "./routes/podioExportApps.js";
 import { podioLeadTest } from "./routes/podioLeadTest.js";
 import { routingResolve } from "./routes/routingResolve.js";
 import { leadRouteTest } from "./routes/leadRouteTest.js";
+import { leadsIntake } from "./routes/leadsIntake.js";
+
 
 export const app = express();
 
@@ -50,6 +52,8 @@ app.get("/routing/resolve", routingResolve);
 // Simulação de lead (POST)
 app.post("/leads/route-test", leadRouteTest);
 app.post("/route-test", leadRouteTest);
+app.post("/leads/intake", leadsIntake);
+
 
 
 // Rotas principais
