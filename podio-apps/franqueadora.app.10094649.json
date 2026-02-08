@@ -1,0 +1,1293 @@
+{
+  "app_id": 10094649,
+  "config": {
+    "allow_attachments": true,
+    "allow_comments": true,
+    "allow_create": true,
+    "allow_edit": true,
+    "allow_tags": true,
+    "app_item_id_padding": 1,
+    "app_item_id_prefix": "",
+    "approved": false,
+    "calendar_color_category_field_id": null,
+    "default_view": "badge",
+    "description": "Aqui estão todos contatos interessados em realizar eventos com a WChic.",
+    "disable_notifications": false,
+    "external_id": null,
+    "fivestar": false,
+    "fivestar_label": null,
+    "icon": "138.png",
+    "icon_id": 138,
+    "item_name": "Prospecção",
+    "name": "Eventos",
+    "rsvp": false,
+    "rsvp_label": null,
+    "show_app_item_id": false,
+    "silent_creates": false,
+    "silent_edits": false,
+    "tasks": [],
+    "thumbs": false,
+    "thumbs_label": null,
+    "type": "standard",
+    "usage": "",
+    "yesno": false,
+    "yesno_label": null
+  },
+  "current_revision": 31,
+  "default_view_id": null,
+  "fields": [
+    {
+      "config": {
+        "default_value": null,
+        "delta": 0,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "ID Externo",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "id-externo",
+      "field_id": 275771018,
+      "label": "ID Externo",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 1,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Nome",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "title",
+      "field_id": 78150313,
+      "label": "Nome",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 2,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "E-mail",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "e-mail",
+      "field_id": 78150314,
+      "label": "E-mail",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 3,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Telefone",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "telefone",
+      "field_id": 78150315,
+      "label": "Telefone",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 4,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Estado",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "estado",
+      "field_id": 78150317,
+      "label": "Estado",
+      "status": "deleted",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 4,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Status",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Novo",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Encaminhado",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Incompleto",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Erro Técnico",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Abandonado",
+              "color": "B8D0F5"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "status",
+      "field_id": 275770868,
+      "label": "Status",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 5,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Encaminhado",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "deleted",
+              "text": "Antiga Franquia Rio de Janeiro (Daiane)",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Franquia Campinas",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 3,
+              "status": "deleted",
+              "text": "Ribeirão Preto",
+              "color": "FFD5C2"
+            },
+            {
+              "id": 4,
+              "status": "deleted",
+              "text": "Costa do Sol",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Franquia Litoral Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "deleted",
+              "text": "Recife",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 7,
+              "status": "deleted",
+              "text": "Belo Horizonte",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 8,
+              "status": "deleted",
+              "text": "Vitória",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Franquia  Rio de Janeiro e BH",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "encaminhado",
+      "field_id": 78150323,
+      "label": "Encaminhado",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 6,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Cidade",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "cidade",
+      "field_id": 78150316,
+      "label": "Cidade",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 7,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Codigo IBGE",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "codigo-ibge",
+      "field_id": 275771029,
+      "label": "Codigo IBGE",
+      "status": "deleted",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 7,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Codigo IBGE",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "codigo-ibge-2",
+      "field_id": 275771031,
+      "label": "Codigo IBGE",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 8,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Estado",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Acre",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Alagoas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Amapá",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Amazonas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Bahia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Ceará",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Distrito Federal",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Espírito Santo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Goiás",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Maranhão",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 11,
+              "status": "active",
+              "text": "Mato Grosso",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 12,
+              "status": "active",
+              "text": "Mato Grosso do Sul",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 13,
+              "status": "active",
+              "text": "Minas Gerais",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 14,
+              "status": "active",
+              "text": "Pará",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 15,
+              "status": "active",
+              "text": "Paraíba",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 16,
+              "status": "active",
+              "text": "Paraná",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 17,
+              "status": "active",
+              "text": "Pernambuco",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 18,
+              "status": "active",
+              "text": "Piauí",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 19,
+              "status": "active",
+              "text": "Rio de Janeiro",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 20,
+              "status": "active",
+              "text": "Rio Grande do Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 21,
+              "status": "active",
+              "text": "Rio Grande do Sul",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 22,
+              "status": "active",
+              "text": "Rondônia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 23,
+              "status": "active",
+              "text": "Roraima",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 24,
+              "status": "active",
+              "text": "Santa Catarina",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 25,
+              "status": "active",
+              "text": "São Paulo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 26,
+              "status": "active",
+              "text": "Sergipe",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 27,
+              "status": "active",
+              "text": "Tocantins",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "dropdown"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "categoria",
+      "field_id": 110427123,
+      "label": "Estado",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 9,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Área da Franquia",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Franquia Campinas",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 2,
+              "status": "deleted",
+              "text": "Ribeirão Preto",
+              "color": "FFD5C2"
+            },
+            {
+              "id": 3,
+              "status": "deleted",
+              "text": "Antiga Franquia Rio de Janeiro (Daiane)",
+              "color": "D2E4EB"
+            },
+            {
+              "id": 4,
+              "status": "deleted",
+              "text": "Costa do Sol",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 5,
+              "status": "deleted",
+              "text": "Recife",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Franquia Litoral Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "deleted",
+              "text": "Fora",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 8,
+              "status": "deleted",
+              "text": "Belo Horizonte",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 9,
+              "status": "deleted",
+              "text": "Vitória",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Franquia Rio de Janeiro e BH",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "area-da-franquia",
+      "field_id": 118849123,
+      "label": "Área da Franquia",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 10,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Data do Contato",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-do-contato",
+      "field_id": 78150318,
+      "label": "Data do Contato",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 11,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Solicitação",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "solicitacao",
+      "field_id": 78150319,
+      "label": "Solicitação",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 12,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Data Acompanhamento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": true,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "data-acompanhamento",
+      "field_id": 78150324,
+      "label": "Data Acompanhamento",
+      "status": "deleted",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 12,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Interesse",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Franquia",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Evento",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Outros",
+              "color": "D1F3EC"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "interesse",
+      "field_id": 78150320,
+      "label": "Interesse",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 13,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Status",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Encaminhado",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Fechado",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Não teve interesse",
+              "color": "F7D1D0"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "status-2",
+      "field_id": 78150325,
+      "label": "Status",
+      "status": "deleted",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 13,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Origem do Contato",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Site",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Facebook",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Evento",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Google",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "origem-do-contrato",
+      "field_id": 78150321,
+      "label": "Origem do Contato",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 14,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Motivo",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "motivo",
+      "field_id": 78150326,
+      "label": "Motivo",
+      "status": "deleted",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 14,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Data do Evento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-do-evento",
+      "field_id": 78150322,
+      "label": "Data do Evento",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 15,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Histórico",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "historico",
+      "field_id": 78150327,
+      "label": "Histórico",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 16,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Valor Fechado",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "valor-fechado",
+      "field_id": 78150328,
+      "label": "Valor Fechado",
+      "status": "deleted",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 16,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Tipo de Evento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "tipo-de-evento",
+      "field_id": 275771045,
+      "label": "Tipo de Evento",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 17,
+        "description": null,
+        "hidden": true,
+        "hidden_create_view_edit": false,
+        "label": "Data Fechamento Contrato",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "data-fechamento-contrato",
+      "field_id": 78150329,
+      "label": "Data Fechamento Contrato",
+      "status": "deleted",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 17,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Perfil do Evento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "perfil-do-evento",
+      "field_id": 275771076,
+      "label": "Perfil do Evento",
+      "status": "deleted",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 17,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Perfil do Evento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Particular",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Corporativo",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Público",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Outros",
+              "color": "B8D0F5"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "perfil-do-evento-2",
+      "field_id": 275771083,
+      "label": "Perfil do Evento",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 18,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Decisor",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Sim",
+              "color": "B8D0F5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Não",
+              "color": "B8D0F5"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "decisor",
+      "field_id": 275771046,
+      "label": "Decisor",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 19,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Público do Evento (Qtde Pessoas)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "publico-do-evento-qtde-pessoas",
+      "field_id": 275771084,
+      "label": "Público do Evento (Qtde Pessoas)",
+      "status": "deleted",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 19,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Público do Evento (Qtde Pessoas)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "publico-do-evento-qtde-pessoas-2",
+      "field_id": 275772012,
+      "label": "Público do Evento (Qtde Pessoas)",
+      "status": "active",
+      "type": "number"
+    }
+  ],
+  "integration": null,
+  "is_default": false,
+  "item_accounting_info": null,
+  "layouts": {
+    "badge_v2": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 78150313,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771018,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 275770868,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 78150318,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 275772012,
+          "type": "field"
+        },
+        "footer_1": {
+          "id": "created_on",
+          "type": "virtual"
+        },
+        "footer_2": {
+          "id": "created_by",
+          "type": "virtual"
+        },
+        "footer_3": {
+          "id": "comment_count",
+          "type": "virtual"
+        }
+      }
+    },
+    "badge": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 78150313,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771018,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 275770868,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 78150318,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 275772012,
+          "type": "field"
+        },
+        "footer_1": {
+          "id": "created_on",
+          "type": "virtual"
+        },
+        "footer_2": {
+          "id": "created_by",
+          "type": "virtual"
+        },
+        "footer_3": {
+          "id": "comment_count",
+          "type": "virtual"
+        }
+      }
+    },
+    "relationship": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 275771018,
+          "type": "field"
+        },
+        "details_1": null,
+        "details_2": null,
+        "details_3": null,
+        "details_4": null
+      }
+    },
+    "card": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 78150313,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771018,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 275770868,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 78150318,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 275772012,
+          "type": "field"
+        }
+      }
+    }
+  },
+  "link": "https://podio.com/wchiccombr/prospeccao/apps/eventos",
+  "link_add": "https://podio.com/wchiccombr/prospeccao/apps/eventos/items/new",
+  "original": 10026222,
+  "original_revision": 15,
+  "owner": {
+    "image": {
+      "external_file_id": null,
+      "file_id": 498443207,
+      "hosted_by": "podio",
+      "hosted_by_humanized_name": "Podio",
+      "link": "https://files.podio.com/498443207",
+      "link_target": "_blank",
+      "thumbnail_link": "https://files.podio.com/498443207",
+      "uuid_link": "https://files.podio.com/247885ab-17b9-43a8-ad9f-4eb81ea1a1ea"
+    },
+    "last_seen_on": "2026-02-07 17:04:16",
+    "link": "https://podio.com/users/2544729",
+    "org_id": null,
+    "profile_id": 144857403,
+    "type": "user",
+    "space_id": null,
+    "user_id": 2544729,
+    "avatar": 498443207,
+    "name": "Atendimento WChic"
+  },
+  "rights": [
+    "add_hook",
+    "view",
+    "add_task",
+    "subscribe",
+    "view_structure",
+    "add_item"
+  ],
+  "sharefile_vault_url": null,
+  "space_id": 2832288,
+  "status": "active",
+  "subscribed": false,
+  "url_add": "https://podio.com/wchiccombr/prospeccao/apps/eventos/items/new",
+  "url": "https://podio.com/wchiccombr/prospeccao/apps/eventos",
+  "url_label": "eventos",
+  "token": null,
+  "mailbox": null
+}

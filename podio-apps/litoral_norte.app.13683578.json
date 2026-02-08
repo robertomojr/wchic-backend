@@ -1,0 +1,2132 @@
+{
+  "app_id": 13683578,
+  "config": {
+    "allow_attachments": true,
+    "allow_comments": true,
+    "allow_create": true,
+    "allow_edit": true,
+    "allow_tags": true,
+    "app_item_id_padding": 1,
+    "app_item_id_prefix": "",
+    "approved": false,
+    "calendar_color_category_field_id": null,
+    "default_view": "badge",
+    "description": null,
+    "disable_notifications": false,
+    "external_id": null,
+    "fivestar": false,
+    "fivestar_label": null,
+    "icon": "11.png",
+    "icon_id": 11,
+    "item_name": "Prospecção",
+    "name": "Prospecção",
+    "rsvp": false,
+    "rsvp_label": null,
+    "show_app_item_id": false,
+    "silent_creates": false,
+    "silent_edits": false,
+    "tasks": [],
+    "thumbs": false,
+    "thumbs_label": null,
+    "type": "standard",
+    "usage": null,
+    "yesno": false,
+    "yesno_label": null
+  },
+  "current_revision": 45,
+  "default_view_id": null,
+  "fields": [
+    {
+      "config": {
+        "default_value": null,
+        "delta": 0,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Código",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "codigo",
+      "field_id": 105166317,
+      "label": "Código",
+      "status": "deleted",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 0,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "ID Externo",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "id-externo",
+      "field_id": 275771040,
+      "label": "ID Externo",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 1,
+        "description": "Repetir o nome ou empresa - cidade do evento",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "2 - Nome do Evento (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "nome-do-evento",
+      "field_id": 104753216,
+      "label": "2 - Nome do Evento (7 dias)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 2,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "2 - Empresa/Nome (48h)",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "size": "small",
+          "format": "plain"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "titulo",
+      "field_id": 104753217,
+      "label": "2 - Empresa/Nome (48h)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 3,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "2 - Contato (48h)",
+        "mapping": null,
+        "required": true,
+        "settings": {
+          "type": "space_contacts",
+          "valid_types": [
+            "space"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "contato",
+      "field_id": 104753218,
+      "label": "2 - Contato (48h)",
+      "status": "active",
+      "type": "contact"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 4,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Número",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": false
+      },
+      "external_id": "numero",
+      "field_id": 105166316,
+      "label": "Número",
+      "status": "deleted",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 4,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Interesse (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Franquia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Evento",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Outros",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "interesse",
+      "field_id": 104753219,
+      "label": "Interesse (48h)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 5,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Responsável pelo Atendimento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Valerya",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "deleted",
+              "text": "Mauricio",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Eder - Central de Vendas",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "responsavel-pelo-atendimento",
+      "field_id": 130404531,
+      "label": "Responsável pelo Atendimento",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 6,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Encaminhado (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Litoral Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Campinas",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Antiga Franquia Rio de Janeiro (Daiane)",
+              "color": "D1F3EC"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Ribeirão Preto",
+              "color": "FFD5C2"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Costa do Sol",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Recife",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Belo Horizonte",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Vitória",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Nova Franquia Rio de Janeiro (Fred)",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "encaminhado",
+      "field_id": 104753220,
+      "label": "Encaminhado (48h)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 7,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "3 - Origem (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Site",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Facebook",
+              "color": "D2E4EB"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Outros",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Evento",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Franquiada",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Central de Vendas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Google",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": true,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "origem-2",
+      "field_id": 104753221,
+      "label": "3 - Origem (48h)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 8,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "3 - Origem Outros (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "origem",
+      "field_id": 104753222,
+      "label": "3 - Origem Outros (48h)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 9,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "4 - Tipo de Evento (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Casamento",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Corporativo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Filmagem / Publicitário",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Particular",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Imobiliário",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Show",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Esportivo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Formatura",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Food Truck / Gastronômico",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Aniversário",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 11,
+              "status": "active",
+              "text": "Bodas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 12,
+              "status": "active",
+              "text": "Batizado",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 13,
+              "status": "active",
+              "text": "Feira",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 14,
+              "status": "active",
+              "text": "Festival",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 15,
+              "status": "active",
+              "text": "Leilão",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 16,
+              "status": "active",
+              "text": "Carnaval",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 17,
+              "status": "active",
+              "text": "Festa Junina/Julina",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 18,
+              "status": "active",
+              "text": "Reveillon",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 19,
+              "status": "active",
+              "text": "Agro / Pecuário",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 20,
+              "status": "active",
+              "text": "Festa",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 21,
+              "status": "active",
+              "text": "Balada",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 22,
+              "status": "active",
+              "text": "Férias na Praia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 23,
+              "status": "active",
+              "text": "Carros",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "4-tipo-de-evento-7-dias",
+      "field_id": 129339103,
+      "label": "4 - Tipo de Evento (7 dias)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 10,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "4 - Tipo de Cliente (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Cerimonial",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Decorador (a)",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Local de Evento",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Agencia de Eventos",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Cliente Direto - Empresa",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Cliente Direto - Noiva (o)",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "deleted",
+              "text": "Decoração",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 8,
+              "status": "deleted",
+              "text": "Empresa de Locação",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 9,
+              "status": "deleted",
+              "text": "Cliente Direto - Noiva",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Empresa de Locação de Equipamentos",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 11,
+              "status": "active",
+              "text": "Buffet",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 12,
+              "status": "active",
+              "text": "Assessor de Eventos",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "tipo-de-atividade",
+      "field_id": 104753223,
+      "label": "4 - Tipo de Cliente (7 dias)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 11,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Cidade do Evento (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "cidade-do-evento",
+      "field_id": 104753224,
+      "label": "Cidade do Evento (7 dias)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 12,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Codigo IBGE",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "codigo-ibge",
+      "field_id": 275771041,
+      "label": "Codigo IBGE",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 13,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Estado (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Acre",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Alagoas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Amapá",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Amazonas",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Bahia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Ceará",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Distrito Federal",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Espírito Santo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Goiás",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Maranhão",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 11,
+              "status": "active",
+              "text": "Mato Grosso",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 12,
+              "status": "active",
+              "text": "Mato Grosso do Sul",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 13,
+              "status": "active",
+              "text": "Minas Gerais",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 14,
+              "status": "active",
+              "text": "Pará",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 15,
+              "status": "active",
+              "text": "Paraíba",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 16,
+              "status": "active",
+              "text": "Paraná",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 17,
+              "status": "active",
+              "text": "Pernambuco",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 18,
+              "status": "active",
+              "text": "Piauí",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 19,
+              "status": "active",
+              "text": "Rio de Janeiro",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 20,
+              "status": "active",
+              "text": "Rio Grande do Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 21,
+              "status": "active",
+              "text": "Rio Grande do Sul",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 22,
+              "status": "active",
+              "text": "Rondônia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 23,
+              "status": "active",
+              "text": "Roraima",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 24,
+              "status": "active",
+              "text": "Santa Catarina",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 25,
+              "status": "active",
+              "text": "São Paulo",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 26,
+              "status": "active",
+              "text": "Sergipe",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 27,
+              "status": "active",
+              "text": "Tocantins",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "dropdown"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "estado",
+      "field_id": 116276683,
+      "label": "Estado (7 dias)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 14,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Área da Franquia",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Litoral Norte",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Fora",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Campinas",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Costa do Sol",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Antiga Franquia Rio de Janeiro (Daiane)",
+              "color": "D2E4EB"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Ribeirão Preto",
+              "color": "FFD5C2"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "Recife",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Belo Horizonte",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Vitória",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 10,
+              "status": "active",
+              "text": "Nova Franquia Rio de Janeiro (Fred)",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "area-da-franquia",
+      "field_id": 118689002,
+      "label": "Área da Franquia",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 15,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Site",
+        "mapping": null,
+        "required": false,
+        "settings": null,
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "site",
+      "field_id": 104753225,
+      "label": "Site",
+      "status": "active",
+      "type": "embed"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 16,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data da Solicitação (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-do-1o-contato",
+      "field_id": 104753226,
+      "label": "Data da Solicitação (48h)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 17,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Solicitação (48h)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "solicitacao",
+      "field_id": 104753227,
+      "label": "Solicitação (48h)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 18,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data Montagem (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": true,
+          "end": "disabled",
+          "time": "enabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-montagem-7-dias",
+      "field_id": 143500189,
+      "label": "Data Montagem (7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 19,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data do Evento (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": true,
+          "end": "enabled",
+          "time": "enabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-do-evento",
+      "field_id": 104753228,
+      "label": "Data do Evento (7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 20,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data Desmontagem (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": true,
+          "end": "disabled",
+          "time": "enabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-desmontagem-7-dias",
+      "field_id": 143500190,
+      "label": "Data Desmontagem (7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 21,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "5 - Status da Prospecção (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "options": [
+            {
+              "id": 1,
+              "status": "active",
+              "text": "Encaminhado",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 2,
+              "status": "active",
+              "text": "Orçamento Enviado",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 3,
+              "status": "active",
+              "text": "Sem Resposta",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 15,
+              "status": "active",
+              "text": "Encerrado - Sem Resposta",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 4,
+              "status": "active",
+              "text": "Recusado - Preço",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 5,
+              "status": "active",
+              "text": "Evento Cancelado",
+              "color": "FFD5C2"
+            },
+            {
+              "id": 6,
+              "status": "active",
+              "text": "Fechado",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 7,
+              "status": "active",
+              "text": "E-mail de Apresentação",
+              "color": "F7F0C5"
+            },
+            {
+              "id": 8,
+              "status": "active",
+              "text": "Recusado - Acesso",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 9,
+              "status": "active",
+              "text": "Recusado",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 12,
+              "status": "active",
+              "text": "Recusado pela Franquia",
+              "color": "F7D1D0"
+            },
+            {
+              "id": 14,
+              "status": "active",
+              "text": "Repassado para Outro Franquiado",
+              "color": "DDDDDD"
+            },
+            {
+              "id": 10,
+              "status": "deleted",
+              "text": "Recusado - sem motivo declarado",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 11,
+              "status": "deleted",
+              "text": "Recusa da Franquia",
+              "color": "DCEBD8"
+            },
+            {
+              "id": 13,
+              "status": "deleted",
+              "text": "Recusado - sem motivo",
+              "color": "DCEBD8"
+            }
+          ],
+          "multiple": false,
+          "display": "inline"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "status-da-prospeccao",
+      "field_id": 104753229,
+      "label": "5 - Status da Prospecção (7 dias)",
+      "status": "active",
+      "type": "category"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 22,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "6 - Histórico (48h / 7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "size": "large",
+          "format": "html"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "historico",
+      "field_id": 104753230,
+      "label": "6 - Histórico (48h / 7 dias)",
+      "status": "active",
+      "type": "text"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 23,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data de Acompanhamento (48h / 7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": true,
+          "end": "disabled",
+          "time": "enabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-de-acompanhamento",
+      "field_id": 104753231,
+      "label": "Data de Acompanhamento (48h / 7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 24,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Proposto Trailers (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-proposto",
+      "field_id": 104753232,
+      "label": "8 - Valor Proposto Trailers (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 25,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Proposto Módulos (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "8-valor-proposto-modulos-7-dias",
+      "field_id": 118413387,
+      "label": "8 - Valor Proposto Módulos (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 26,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Proposto Frete (7 dias)     ",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "USD",
+            "EUR",
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "8-valor-proposto-frete-7-dias",
+      "field_id": 240262861,
+      "label": "8 - Valor Proposto Frete (7 dias)     ",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 27,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Fechado Trailers (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-fechado",
+      "field_id": 104753233,
+      "label": "8 - Valor Fechado Trailers (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 28,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Fechado Módulos (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "USD"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "8-valor-fechado-modulos-7-dias",
+      "field_id": 118413388,
+      "label": "8 - Valor Fechado Módulos (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 29,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "8 - Valor Fechado Frete (7 dias)       ",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "USD",
+            "EUR",
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "8-valor-fechado-frete-7-dias",
+      "field_id": 240262862,
+      "label": "8 - Valor Fechado Frete (7 dias)       ",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 30,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "9 - Número de Diárias (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "numero-de-diarias",
+      "field_id": 104753234,
+      "label": "9 - Número de Diárias (7 dias)",
+      "status": "active",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 31,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "9 - Número de Trailers (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "numero-de-trailers",
+      "field_id": 104948470,
+      "label": "9 - Número de Trailers (7 dias)",
+      "status": "active",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 32,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "9 - Número de Módulos (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "decimals": 0
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "9-numero-de-modulos-7-dias",
+      "field_id": 118413386,
+      "label": "9 - Número de Módulos (7 dias)",
+      "status": "active",
+      "type": "number"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 33,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data 1° Pagamento",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-1deg-pagamento",
+      "field_id": 149039267,
+      "label": "Data 1° Pagamento",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 34,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Valor Proposto por Diária/Trailer",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "unit": null,
+          "decimals": 2,
+          "time": null,
+          "calendar": null,
+          "color": null,
+          "expression": null,
+          "script": "@[Valor Proposto](field_104753232) / @[Número de Diárias](field_104753234) / @[Número de Trailers](field_104948470)",
+          "return_type": "number"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-por-diariatrailer",
+      "field_id": 104948471,
+      "label": "Valor Proposto por Diária/Trailer",
+      "status": "active",
+      "type": "calculation"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 35,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Valor Proposto por Diária/Módulo",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "unit": null,
+          "decimals": 2,
+          "time": null,
+          "calendar": null,
+          "color": null,
+          "expression": null,
+          "script": "@[8 - Valor Proposto Módulos (7 dias)](field_118413387) / @[9 - Número de Diárias (7 dias)](field_104753234) / @[9 - Número de Módulos (7 dias)](field_118413386)",
+          "return_type": "number"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-proposto-por-diariamodulo",
+      "field_id": 118413389,
+      "label": "Valor Proposto por Diária/Módulo",
+      "status": "active",
+      "type": "calculation"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 36,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Valor Fechado por diária/trailer",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "unit": null,
+          "decimals": 2,
+          "time": null,
+          "calendar": null,
+          "color": null,
+          "expression": null,
+          "script": "@[Valor Fechado](field_104753233) / @[Número de Diárias](field_104753234) / @[Número de Trailers](field_104948470)",
+          "return_type": "number"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-fechado-por-diariatrailer",
+      "field_id": 105607849,
+      "label": "Valor Fechado por diária/trailer",
+      "status": "active",
+      "type": "calculation"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 37,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Valor Fechado por Diária/Módulo",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "unit": null,
+          "decimals": 2,
+          "time": null,
+          "calendar": null,
+          "color": null,
+          "expression": null,
+          "script": "@[8 - Valor Fechado Módulos (7 dias)](field_118413388) / @[9 - Número de Diárias (7 dias)](field_104753234) / @[9 - Número de Módulos (7 dias)](field_118413386)",
+          "return_type": "number"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "valor-fechado-por-diariamodulo",
+      "field_id": 118413390,
+      "label": "Valor Fechado por Diária/Módulo",
+      "status": "active",
+      "type": "calculation"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 38,
+        "description": "Aqui você coloca a data que o cliente aceitou o pedido de orçamento.",
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data Aceite da Proposta (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "disabled",
+          "time": "disabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-fechamento-contrato",
+      "field_id": 104753235,
+      "label": "Data Aceite da Proposta (7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 39,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Data do Evento Cancelado (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "calendar": false,
+          "end": "enabled",
+          "time": "enabled",
+          "color": "DCEBD8"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "data-do-evento-cancelado",
+      "field_id": 104753236,
+      "label": "Data do Evento Cancelado (7 dias)",
+      "status": "active",
+      "type": "date"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 40,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Frete (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-frete",
+      "field_id": 104753237,
+      "label": "10 - Custos: Frete (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 41,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Técnico (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-tecnico",
+      "field_id": 104753238,
+      "label": "10 - Custos: Técnico (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 42,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Hospedagem (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-hospedagem",
+      "field_id": 104753239,
+      "label": "10 - Custos: Hospedagem (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 43,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Limpa Fossa (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-limpa-fossa",
+      "field_id": 104753240,
+      "label": "10 - Custos: Limpa Fossa (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 44,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Insumos (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-insumos",
+      "field_id": 104753241,
+      "label": "10 - Custos: Insumos (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 45,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Custos: Limpeza/Alimentação (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "custos-limpezaalimentacao",
+      "field_id": 104753242,
+      "label": "10 - Custos: Limpeza/Alimentação (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 46,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Comissão de Vendas (BV) (-) (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "comissao-de-vendas",
+      "field_id": 104753243,
+      "label": "10 - Comissão de Vendas (BV) (-) (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 47,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Repasse Outras Franquias (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "repasse-outras-franquias",
+      "field_id": 104753244,
+      "label": "10 - Repasse Outras Franquias (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 48,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "10 - Comissão por Indicação (+) (7 dias)",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "allowed_currencies": [
+            "BRL"
+          ]
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "comissao-por-repasse",
+      "field_id": 104753245,
+      "label": "10 - Comissão por Indicação (+) (7 dias)",
+      "status": "active",
+      "type": "money"
+    },
+    {
+      "config": {
+        "default_value": null,
+        "delta": 49,
+        "description": null,
+        "hidden": false,
+        "hidden_create_view_edit": false,
+        "label": "Custo Total",
+        "mapping": null,
+        "required": false,
+        "settings": {
+          "unit": null,
+          "decimals": 2,
+          "time": null,
+          "calendar": null,
+          "color": null,
+          "expression": null,
+          "script": "@[Custos: Frete](field_104753237) + @[Custos: Técnico](field_104753238) + @[Custos: Hospedagem](field_104753239) + @[Custos: Limpa Fossa](field_104753240) + @[Custos: Insumos](field_104753241) + @[Custos: Limpeza/Alimentação](field_104753242) + @[Comissão de Vendas](field_104753243) + @[Repasse Outras Franquias](field_104753244)",
+          "return_type": "number"
+        },
+        "unique": false,
+        "visible": true
+      },
+      "external_id": "calculo",
+      "field_id": 104753246,
+      "label": "Custo Total",
+      "status": "active",
+      "type": "calculation"
+    }
+  ],
+  "integration": null,
+  "is_default": false,
+  "item_accounting_info": null,
+  "layouts": {
+    "badge_v2": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 104753216,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771040,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 104753219,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 104753218,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 104753226,
+          "type": "field"
+        },
+        "footer_1": {
+          "id": "created_on",
+          "type": "virtual"
+        },
+        "footer_2": {
+          "id": "created_by",
+          "type": "virtual"
+        },
+        "footer_3": {
+          "id": "comment_count",
+          "type": "virtual"
+        }
+      }
+    },
+    "badge": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 104753216,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771040,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 104753219,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 104753218,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 104753226,
+          "type": "field"
+        },
+        "footer_1": {
+          "id": "created_on",
+          "type": "virtual"
+        },
+        "footer_2": {
+          "id": "created_by",
+          "type": "virtual"
+        },
+        "footer_3": {
+          "id": "comment_count",
+          "type": "virtual"
+        }
+      }
+    },
+    "relationship": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 275771040,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 104753219,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 104753218,
+          "type": "field"
+        },
+        "details_3": null,
+        "details_4": null
+      }
+    },
+    "card": {
+      "default": true,
+      "fields": {
+        "header": {
+          "id": 104753216,
+          "type": "field"
+        },
+        "content": {
+          "id": 275771040,
+          "type": "field"
+        },
+        "details_1": {
+          "id": 104753219,
+          "type": "field"
+        },
+        "details_2": {
+          "id": 104753218,
+          "type": "field"
+        },
+        "details_3": {
+          "id": 104753226,
+          "type": "field"
+        }
+      }
+    }
+  },
+  "link": "https://podio.com/wchiccombr/franquia-caraguatatuba/apps/prospeccao",
+  "link_add": "https://podio.com/wchiccombr/franquia-caraguatatuba/apps/prospeccao/items/new",
+  "original": 10777978,
+  "original_revision": 45,
+  "owner": {
+    "image": {
+      "external_file_id": null,
+      "file_id": 498443207,
+      "hosted_by": "podio",
+      "hosted_by_humanized_name": "Podio",
+      "link": "https://files.podio.com/498443207",
+      "link_target": "_blank",
+      "thumbnail_link": "https://files.podio.com/498443207",
+      "uuid_link": "https://files.podio.com/247885ab-17b9-43a8-ad9f-4eb81ea1a1ea"
+    },
+    "last_seen_on": "2026-02-07 17:04:16",
+    "link": "https://podio.com/users/2544729",
+    "org_id": null,
+    "profile_id": 144857403,
+    "type": "user",
+    "space_id": null,
+    "user_id": 2544729,
+    "avatar": 498443207,
+    "name": "Atendimento WChic"
+  },
+  "rights": [
+    "view_structure",
+    "add_hook",
+    "subscribe",
+    "view",
+    "add_task",
+    "add_item"
+  ],
+  "sharefile_vault_url": null,
+  "space_id": 3935012,
+  "status": "active",
+  "subscribed": false,
+  "url_add": "https://podio.com/wchiccombr/franquia-caraguatatuba/apps/prospeccao/items/new",
+  "url": "https://podio.com/wchiccombr/franquia-caraguatatuba/apps/prospeccao",
+  "url_label": "prospeccao",
+  "token": null,
+  "mailbox": null
+}

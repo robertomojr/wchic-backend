@@ -1,0 +1,467 @@
+{
+  "workspace_key": "litoral_norte",
+  "workspace_name": "Litoral Norte",
+  "app_id": 13683578,
+  "generated_at": "2026-02-07T17:16:56.878Z",
+  "fields": {
+    "codigo": {
+      "field_id": 105166317,
+      "type": "number",
+      "label": "Código",
+      "required": false
+    },
+    "id-externo": {
+      "field_id": 275771040,
+      "type": "text",
+      "label": "ID Externo",
+      "required": false
+    },
+    "nome-do-evento": {
+      "field_id": 104753216,
+      "type": "text",
+      "label": "2 - Nome do Evento (7 dias)",
+      "required": false
+    },
+    "titulo": {
+      "field_id": 104753217,
+      "type": "text",
+      "label": "2 - Empresa/Nome (48h)",
+      "required": true
+    },
+    "contato": {
+      "field_id": 104753218,
+      "type": "contact",
+      "label": "2 - Contato (48h)",
+      "required": true
+    },
+    "numero": {
+      "field_id": 105166316,
+      "type": "number",
+      "label": "Número",
+      "required": false
+    },
+    "interesse": {
+      "field_id": 104753219,
+      "type": "category",
+      "label": "Interesse (48h)",
+      "required": false
+    },
+    "responsavel-pelo-atendimento": {
+      "field_id": 130404531,
+      "type": "category",
+      "label": "Responsável pelo Atendimento",
+      "required": false
+    },
+    "encaminhado": {
+      "field_id": 104753220,
+      "type": "category",
+      "label": "Encaminhado (48h)",
+      "required": false
+    },
+    "origem-2": {
+      "field_id": 104753221,
+      "type": "category",
+      "label": "3 - Origem (48h)",
+      "required": false
+    },
+    "origem": {
+      "field_id": 104753222,
+      "type": "text",
+      "label": "3 - Origem Outros (48h)",
+      "required": false
+    },
+    "4-tipo-de-evento-7-dias": {
+      "field_id": 129339103,
+      "type": "category",
+      "label": "4 - Tipo de Evento (7 dias)",
+      "required": false
+    },
+    "tipo-de-atividade": {
+      "field_id": 104753223,
+      "type": "category",
+      "label": "4 - Tipo de Cliente (7 dias)",
+      "required": false
+    },
+    "cidade-do-evento": {
+      "field_id": 104753224,
+      "type": "text",
+      "label": "Cidade do Evento (7 dias)",
+      "required": false
+    },
+    "codigo-ibge": {
+      "field_id": 275771041,
+      "type": "text",
+      "label": "Codigo IBGE",
+      "required": false
+    },
+    "estado": {
+      "field_id": 116276683,
+      "type": "category",
+      "label": "Estado (7 dias)",
+      "required": false
+    },
+    "area-da-franquia": {
+      "field_id": 118689002,
+      "type": "category",
+      "label": "Área da Franquia",
+      "required": false
+    },
+    "site": {
+      "field_id": 104753225,
+      "type": "embed",
+      "label": "Site",
+      "required": false
+    },
+    "data-do-1o-contato": {
+      "field_id": 104753226,
+      "type": "date",
+      "label": "Data da Solicitação (48h)",
+      "required": false
+    },
+    "solicitacao": {
+      "field_id": 104753227,
+      "type": "text",
+      "label": "Solicitação (48h)",
+      "required": false
+    },
+    "data-montagem-7-dias": {
+      "field_id": 143500189,
+      "type": "date",
+      "label": "Data Montagem (7 dias)",
+      "required": false
+    },
+    "data-do-evento": {
+      "field_id": 104753228,
+      "type": "date",
+      "label": "Data do Evento (7 dias)",
+      "required": false
+    },
+    "data-desmontagem-7-dias": {
+      "field_id": 143500190,
+      "type": "date",
+      "label": "Data Desmontagem (7 dias)",
+      "required": false
+    },
+    "status-da-prospeccao": {
+      "field_id": 104753229,
+      "type": "category",
+      "label": "5 - Status da Prospecção (7 dias)",
+      "required": false
+    },
+    "historico": {
+      "field_id": 104753230,
+      "type": "text",
+      "label": "6 - Histórico (48h / 7 dias)",
+      "required": false
+    },
+    "data-de-acompanhamento": {
+      "field_id": 104753231,
+      "type": "date",
+      "label": "Data de Acompanhamento (48h / 7 dias)",
+      "required": false
+    },
+    "valor-proposto": {
+      "field_id": 104753232,
+      "type": "money",
+      "label": "8 - Valor Proposto Trailers (7 dias)",
+      "required": false
+    },
+    "8-valor-proposto-modulos-7-dias": {
+      "field_id": 118413387,
+      "type": "money",
+      "label": "8 - Valor Proposto Módulos (7 dias)",
+      "required": false
+    },
+    "8-valor-proposto-frete-7-dias": {
+      "field_id": 240262861,
+      "type": "money",
+      "label": "8 - Valor Proposto Frete (7 dias)     ",
+      "required": false
+    },
+    "valor-fechado": {
+      "field_id": 104753233,
+      "type": "money",
+      "label": "8 - Valor Fechado Trailers (7 dias)",
+      "required": false
+    },
+    "8-valor-fechado-modulos-7-dias": {
+      "field_id": 118413388,
+      "type": "money",
+      "label": "8 - Valor Fechado Módulos (7 dias)",
+      "required": false
+    },
+    "8-valor-fechado-frete-7-dias": {
+      "field_id": 240262862,
+      "type": "money",
+      "label": "8 - Valor Fechado Frete (7 dias)       ",
+      "required": false
+    },
+    "numero-de-diarias": {
+      "field_id": 104753234,
+      "type": "number",
+      "label": "9 - Número de Diárias (7 dias)",
+      "required": false
+    },
+    "numero-de-trailers": {
+      "field_id": 104948470,
+      "type": "number",
+      "label": "9 - Número de Trailers (7 dias)",
+      "required": false
+    },
+    "9-numero-de-modulos-7-dias": {
+      "field_id": 118413386,
+      "type": "number",
+      "label": "9 - Número de Módulos (7 dias)",
+      "required": false
+    },
+    "data-1deg-pagamento": {
+      "field_id": 149039267,
+      "type": "date",
+      "label": "Data 1° Pagamento",
+      "required": false
+    },
+    "valor-por-diariatrailer": {
+      "field_id": 104948471,
+      "type": "calculation",
+      "label": "Valor Proposto por Diária/Trailer",
+      "required": false
+    },
+    "valor-proposto-por-diariamodulo": {
+      "field_id": 118413389,
+      "type": "calculation",
+      "label": "Valor Proposto por Diária/Módulo",
+      "required": false
+    },
+    "valor-fechado-por-diariatrailer": {
+      "field_id": 105607849,
+      "type": "calculation",
+      "label": "Valor Fechado por diária/trailer",
+      "required": false
+    },
+    "valor-fechado-por-diariamodulo": {
+      "field_id": 118413390,
+      "type": "calculation",
+      "label": "Valor Fechado por Diária/Módulo",
+      "required": false
+    },
+    "data-fechamento-contrato": {
+      "field_id": 104753235,
+      "type": "date",
+      "label": "Data Aceite da Proposta (7 dias)",
+      "required": false
+    },
+    "data-do-evento-cancelado": {
+      "field_id": 104753236,
+      "type": "date",
+      "label": "Data do Evento Cancelado (7 dias)",
+      "required": false
+    },
+    "custos-frete": {
+      "field_id": 104753237,
+      "type": "money",
+      "label": "10 - Custos: Frete (7 dias)",
+      "required": false
+    },
+    "custos-tecnico": {
+      "field_id": 104753238,
+      "type": "money",
+      "label": "10 - Custos: Técnico (7 dias)",
+      "required": false
+    },
+    "custos-hospedagem": {
+      "field_id": 104753239,
+      "type": "money",
+      "label": "10 - Custos: Hospedagem (7 dias)",
+      "required": false
+    },
+    "custos-limpa-fossa": {
+      "field_id": 104753240,
+      "type": "money",
+      "label": "10 - Custos: Limpa Fossa (7 dias)",
+      "required": false
+    },
+    "custos-insumos": {
+      "field_id": 104753241,
+      "type": "money",
+      "label": "10 - Custos: Insumos (7 dias)",
+      "required": false
+    },
+    "custos-limpezaalimentacao": {
+      "field_id": 104753242,
+      "type": "money",
+      "label": "10 - Custos: Limpeza/Alimentação (7 dias)",
+      "required": false
+    },
+    "comissao-de-vendas": {
+      "field_id": 104753243,
+      "type": "money",
+      "label": "10 - Comissão de Vendas (BV) (-) (7 dias)",
+      "required": false
+    },
+    "repasse-outras-franquias": {
+      "field_id": 104753244,
+      "type": "money",
+      "label": "10 - Repasse Outras Franquias (7 dias)",
+      "required": false
+    },
+    "comissao-por-repasse": {
+      "field_id": 104753245,
+      "type": "money",
+      "label": "10 - Comissão por Indicação (+) (7 dias)",
+      "required": false
+    },
+    "calculo": {
+      "field_id": 104753246,
+      "type": "calculation",
+      "label": "Custo Total",
+      "required": false
+    }
+  },
+  "categories": {
+    "interesse": {
+      "options": {
+        "Franquia": 1,
+        "Evento": 2,
+        "Outros": 3
+      }
+    },
+    "responsavel-pelo-atendimento": {
+      "options": {
+        "Valerya": 1,
+        "Mauricio": 2,
+        "Eder - Central de Vendas": 3
+      }
+    },
+    "encaminhado": {
+      "options": {
+        "Litoral Norte": 5,
+        "Campinas": 1,
+        "Antiga Franquia Rio de Janeiro (Daiane)": 2,
+        "Ribeirão Preto": 3,
+        "Costa do Sol": 4,
+        "Recife": 6,
+        "Belo Horizonte": 7,
+        "Vitória": 8,
+        "Nova Franquia Rio de Janeiro (Fred)": 9
+      }
+    },
+    "origem-2": {
+      "options": {
+        "Site": 1,
+        "Facebook": 2,
+        "Outros": 3,
+        "Evento": 4,
+        "Franquiada": 5,
+        "Central de Vendas": 6,
+        "Google": 7
+      }
+    },
+    "4-tipo-de-evento-7-dias": {
+      "options": {
+        "Casamento": 1,
+        "Corporativo": 2,
+        "Filmagem / Publicitário": 3,
+        "Particular": 4,
+        "Imobiliário": 5,
+        "Show": 6,
+        "Esportivo": 7,
+        "Formatura": 8,
+        "Food Truck / Gastronômico": 9,
+        "Aniversário": 10,
+        "Bodas": 11,
+        "Batizado": 12,
+        "Feira": 13,
+        "Festival": 14,
+        "Leilão": 15,
+        "Carnaval": 16,
+        "Festa Junina/Julina": 17,
+        "Reveillon": 18,
+        "Agro / Pecuário": 19,
+        "Festa": 20,
+        "Balada": 21,
+        "Férias na Praia": 22,
+        "Carros": 23
+      }
+    },
+    "tipo-de-atividade": {
+      "options": {
+        "Cerimonial": 1,
+        "Decorador (a)": 2,
+        "Local de Evento": 3,
+        "Agencia de Eventos": 4,
+        "Cliente Direto - Empresa": 5,
+        "Cliente Direto - Noiva (o)": 6,
+        "Decoração": 7,
+        "Empresa de Locação": 8,
+        "Cliente Direto - Noiva": 9,
+        "Empresa de Locação de Equipamentos": 10,
+        "Buffet": 11,
+        "Assessor de Eventos": 12
+      }
+    },
+    "estado": {
+      "options": {
+        "Acre": 1,
+        "Alagoas": 2,
+        "Amapá": 3,
+        "Amazonas": 4,
+        "Bahia": 5,
+        "Ceará": 6,
+        "Distrito Federal": 7,
+        "Espírito Santo": 8,
+        "Goiás": 9,
+        "Maranhão": 10,
+        "Mato Grosso": 11,
+        "Mato Grosso do Sul": 12,
+        "Minas Gerais": 13,
+        "Pará": 14,
+        "Paraíba": 15,
+        "Paraná": 16,
+        "Pernambuco": 17,
+        "Piauí": 18,
+        "Rio de Janeiro": 19,
+        "Rio Grande do Norte": 20,
+        "Rio Grande do Sul": 21,
+        "Rondônia": 22,
+        "Roraima": 23,
+        "Santa Catarina": 24,
+        "São Paulo": 25,
+        "Sergipe": 26,
+        "Tocantins": 27
+      }
+    },
+    "area-da-franquia": {
+      "options": {
+        "Litoral Norte": 1,
+        "Fora": 2,
+        "Campinas": 3,
+        "Costa do Sol": 4,
+        "Antiga Franquia Rio de Janeiro (Daiane)": 5,
+        "Ribeirão Preto": 6,
+        "Recife": 7,
+        "Belo Horizonte": 8,
+        "Vitória": 9,
+        "Nova Franquia Rio de Janeiro (Fred)": 10
+      }
+    },
+    "status-da-prospeccao": {
+      "options": {
+        "Encaminhado": 1,
+        "Orçamento Enviado": 2,
+        "Sem Resposta": 3,
+        "Encerrado - Sem Resposta": 15,
+        "Recusado - Preço": 4,
+        "Evento Cancelado": 5,
+        "Fechado": 6,
+        "E-mail de Apresentação": 7,
+        "Recusado - Acesso": 8,
+        "Recusado": 9,
+        "Recusado pela Franquia": 12,
+        "Repassado para Outro Franquiado": 14,
+        "Recusado - sem motivo declarado": 10,
+        "Recusa da Franquia": 11,
+        "Recusado - sem motivo": 13
+      }
+    }
+  }
+}

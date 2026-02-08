@@ -1,0 +1,287 @@
+{
+  "workspace_key": "franqueadora",
+  "workspace_name": "Franqueadora",
+  "app_id": 10094649,
+  "generated_at": "2026-02-07T17:16:56.870Z",
+  "fields": {
+    "id-externo": {
+      "field_id": 275771018,
+      "type": "text",
+      "label": "ID Externo",
+      "required": false
+    },
+    "title": {
+      "field_id": 78150313,
+      "type": "text",
+      "label": "Nome",
+      "required": true
+    },
+    "e-mail": {
+      "field_id": 78150314,
+      "type": "text",
+      "label": "E-mail",
+      "required": false
+    },
+    "telefone": {
+      "field_id": 78150315,
+      "type": "text",
+      "label": "Telefone",
+      "required": false
+    },
+    "estado": {
+      "field_id": 78150317,
+      "type": "text",
+      "label": "Estado",
+      "required": false
+    },
+    "status": {
+      "field_id": 275770868,
+      "type": "category",
+      "label": "Status",
+      "required": false
+    },
+    "encaminhado": {
+      "field_id": 78150323,
+      "type": "category",
+      "label": "Encaminhado",
+      "required": false
+    },
+    "cidade": {
+      "field_id": 78150316,
+      "type": "text",
+      "label": "Cidade",
+      "required": false
+    },
+    "codigo-ibge": {
+      "field_id": 275771029,
+      "type": "number",
+      "label": "Codigo IBGE",
+      "required": false
+    },
+    "codigo-ibge-2": {
+      "field_id": 275771031,
+      "type": "text",
+      "label": "Codigo IBGE",
+      "required": false
+    },
+    "categoria": {
+      "field_id": 110427123,
+      "type": "category",
+      "label": "Estado",
+      "required": false
+    },
+    "area-da-franquia": {
+      "field_id": 118849123,
+      "type": "category",
+      "label": "Área da Franquia",
+      "required": false
+    },
+    "data-do-contato": {
+      "field_id": 78150318,
+      "type": "date",
+      "label": "Data do Contato",
+      "required": false
+    },
+    "solicitacao": {
+      "field_id": 78150319,
+      "type": "text",
+      "label": "Solicitação",
+      "required": false
+    },
+    "data-acompanhamento": {
+      "field_id": 78150324,
+      "type": "date",
+      "label": "Data Acompanhamento",
+      "required": false
+    },
+    "interesse": {
+      "field_id": 78150320,
+      "type": "category",
+      "label": "Interesse",
+      "required": false
+    },
+    "status-2": {
+      "field_id": 78150325,
+      "type": "category",
+      "label": "Status",
+      "required": false
+    },
+    "origem-do-contrato": {
+      "field_id": 78150321,
+      "type": "category",
+      "label": "Origem do Contato",
+      "required": false
+    },
+    "motivo": {
+      "field_id": 78150326,
+      "type": "text",
+      "label": "Motivo",
+      "required": false
+    },
+    "data-do-evento": {
+      "field_id": 78150322,
+      "type": "date",
+      "label": "Data do Evento",
+      "required": false
+    },
+    "historico": {
+      "field_id": 78150327,
+      "type": "text",
+      "label": "Histórico",
+      "required": false
+    },
+    "valor-fechado": {
+      "field_id": 78150328,
+      "type": "money",
+      "label": "Valor Fechado",
+      "required": false
+    },
+    "tipo-de-evento": {
+      "field_id": 275771045,
+      "type": "text",
+      "label": "Tipo de Evento",
+      "required": false
+    },
+    "data-fechamento-contrato": {
+      "field_id": 78150329,
+      "type": "date",
+      "label": "Data Fechamento Contrato",
+      "required": false
+    },
+    "perfil-do-evento": {
+      "field_id": 275771076,
+      "type": "text",
+      "label": "Perfil do Evento",
+      "required": false
+    },
+    "perfil-do-evento-2": {
+      "field_id": 275771083,
+      "type": "category",
+      "label": "Perfil do Evento",
+      "required": false
+    },
+    "decisor": {
+      "field_id": 275771046,
+      "type": "category",
+      "label": "Decisor",
+      "required": false
+    },
+    "publico-do-evento-qtde-pessoas": {
+      "field_id": 275771084,
+      "type": "text",
+      "label": "Público do Evento (Qtde Pessoas)",
+      "required": false
+    },
+    "publico-do-evento-qtde-pessoas-2": {
+      "field_id": 275772012,
+      "type": "number",
+      "label": "Público do Evento (Qtde Pessoas)",
+      "required": false
+    }
+  },
+  "categories": {
+    "status": {
+      "options": {
+        "Novo": 1,
+        "Encaminhado": 2,
+        "Incompleto": 3,
+        "Erro Técnico": 4,
+        "Abandonado": 5
+      }
+    },
+    "encaminhado": {
+      "options": {
+        "Antiga Franquia Rio de Janeiro (Daiane)": 1,
+        "Franquia Campinas": 2,
+        "Ribeirão Preto": 3,
+        "Costa do Sol": 4,
+        "Franquia Litoral Norte": 5,
+        "Recife": 6,
+        "Belo Horizonte": 7,
+        "Vitória": 8,
+        "Franquia  Rio de Janeiro e BH": 9
+      }
+    },
+    "categoria": {
+      "options": {
+        "Acre": 1,
+        "Alagoas": 2,
+        "Amapá": 3,
+        "Amazonas": 4,
+        "Bahia": 5,
+        "Ceará": 6,
+        "Distrito Federal": 7,
+        "Espírito Santo": 8,
+        "Goiás": 9,
+        "Maranhão": 10,
+        "Mato Grosso": 11,
+        "Mato Grosso do Sul": 12,
+        "Minas Gerais": 13,
+        "Pará": 14,
+        "Paraíba": 15,
+        "Paraná": 16,
+        "Pernambuco": 17,
+        "Piauí": 18,
+        "Rio de Janeiro": 19,
+        "Rio Grande do Norte": 20,
+        "Rio Grande do Sul": 21,
+        "Rondônia": 22,
+        "Roraima": 23,
+        "Santa Catarina": 24,
+        "São Paulo": 25,
+        "Sergipe": 26,
+        "Tocantins": 27
+      }
+    },
+    "area-da-franquia": {
+      "options": {
+        "Franquia Campinas": 1,
+        "Ribeirão Preto": 2,
+        "Antiga Franquia Rio de Janeiro (Daiane)": 3,
+        "Costa do Sol": 4,
+        "Recife": 5,
+        "Franquia Litoral Norte": 6,
+        "Fora": 7,
+        "Belo Horizonte": 8,
+        "Vitória": 9,
+        "Franquia Rio de Janeiro e BH": 10
+      }
+    },
+    "interesse": {
+      "options": {
+        "Franquia": 1,
+        "Evento": 2,
+        "Outros": 3
+      }
+    },
+    "status-2": {
+      "options": {
+        "Encaminhado": 1,
+        "Fechado": 2,
+        "Não teve interesse": 3
+      }
+    },
+    "origem-do-contrato": {
+      "options": {
+        "Site": 1,
+        "Facebook": 2,
+        "Evento": 3,
+        "Google": 4
+      }
+    },
+    "perfil-do-evento-2": {
+      "options": {
+        "Particular": 1,
+        "Corporativo": 2,
+        "Público": 3,
+        "Outros": 4
+      }
+    },
+    "decisor": {
+      "options": {
+        "Sim": 1,
+        "Não": 2
+      }
+    }
+  }
+}

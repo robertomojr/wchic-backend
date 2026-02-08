@@ -1,0 +1,516 @@
+{
+  "workspace_key": "campinas",
+  "workspace_name": "Campinas",
+  "app_id": 10777978,
+  "generated_at": "2026-02-07T17:16:56.877Z",
+  "fields": {
+    "id-externo": {
+      "field_id": 275771039,
+      "type": "text",
+      "label": "ID Externo",
+      "required": false
+    },
+    "nome-do-evento": {
+      "field_id": 93115672,
+      "type": "text",
+      "label": "2 - Nome do Evento (7 dias)",
+      "required": false
+    },
+    "categoria": {
+      "field_id": 136297268,
+      "type": "category",
+      "label": "Categoria",
+      "required": false
+    },
+    "titulo": {
+      "field_id": 83203969,
+      "type": "text",
+      "label": "2 - Empresa/Nome (48h)",
+      "required": true
+    },
+    "responsavel-pelo-atendimento": {
+      "field_id": 118693148,
+      "type": "category",
+      "label": "Responsável pelo Atendimento",
+      "required": false
+    },
+    "contato": {
+      "field_id": 83205269,
+      "type": "contact",
+      "label": "2 - Contato (48h)",
+      "required": true
+    },
+    "interesse": {
+      "field_id": 83205282,
+      "type": "category",
+      "label": "Interesse (48h)",
+      "required": false
+    },
+    "encaminhado": {
+      "field_id": 83206080,
+      "type": "category",
+      "label": "Encaminhado (48h)",
+      "required": false
+    },
+    "origem-2": {
+      "field_id": 83205283,
+      "type": "category",
+      "label": "3 - Origem (48h)",
+      "required": false
+    },
+    "origem": {
+      "field_id": 83205275,
+      "type": "text",
+      "label": "3 - Origem Outros (48h)",
+      "required": false
+    },
+    "4-perfil-do-evento-7-dias": {
+      "field_id": 129281010,
+      "type": "category",
+      "label": "4 - Perfil do Evento (7 dias)",
+      "required": false
+    },
+    "tipo-de-atividade": {
+      "field_id": 83205270,
+      "type": "category",
+      "label": "4 - Perfil do Cliente (7 dias)",
+      "required": false
+    },
+    "cidade-do-evento": {
+      "field_id": 83205271,
+      "type": "text",
+      "label": "Cidade do Evento (7 dias)",
+      "required": false
+    },
+    "codigo-ibge": {
+      "field_id": 275771038,
+      "type": "text",
+      "label": "Codigo IBGE",
+      "required": false
+    },
+    "motivo": {
+      "field_id": 83205284,
+      "type": "text",
+      "label": "Motivo",
+      "required": false
+    },
+    "estado": {
+      "field_id": 116276409,
+      "type": "category",
+      "label": "Estado (7 dias)",
+      "required": false
+    },
+    "area-da-franquia": {
+      "field_id": 118684973,
+      "type": "category",
+      "label": "Área da Franquia",
+      "required": false
+    },
+    "site": {
+      "field_id": 83205272,
+      "type": "embed",
+      "label": "Site",
+      "required": false
+    },
+    "data-do-1o-contato": {
+      "field_id": 83205273,
+      "type": "date",
+      "label": "Data da Solicitação (48h)",
+      "required": false
+    },
+    "solicitacao": {
+      "field_id": 83205274,
+      "type": "text",
+      "label": "Solicitação (48h)",
+      "required": false
+    },
+    "data-do-evento": {
+      "field_id": 83205276,
+      "type": "date",
+      "label": "Data do Evento (7 dias)",
+      "required": false
+    },
+    "status-da-prospeccao": {
+      "field_id": 83205277,
+      "type": "category",
+      "label": "5 - Status da Prospecção (7 dias)",
+      "required": false
+    },
+    "historico": {
+      "field_id": 83205278,
+      "type": "text",
+      "label": "6 - Histórico (48h / 7 dias)",
+      "required": false
+    },
+    "data-de-acompanhamento": {
+      "field_id": 83205279,
+      "type": "date",
+      "label": "Data de Acompanhamento (48h / 7 dias)",
+      "required": false
+    },
+    "valor-total-proposto-trailers": {
+      "field_id": 108033380,
+      "type": "calculation",
+      "label": "Valor Total Proposto Trailers",
+      "required": false
+    },
+    "data-central-de-vendas-48h7-dias": {
+      "field_id": 143771679,
+      "type": "date",
+      "label": "Data Central de Vendas (48h/7 dias)",
+      "required": false
+    },
+    "valor-total-fechado-trailers": {
+      "field_id": 108033379,
+      "type": "calculation",
+      "label": "Valor Total Fechado Trailers",
+      "required": false
+    },
+    "numero-de-diarias": {
+      "field_id": 104499483,
+      "type": "number",
+      "label": "9 - Número de Diárias (7 dias)",
+      "required": false
+    },
+    "numero-de-trailers": {
+      "field_id": 104948717,
+      "type": "number",
+      "label": "9 - Número de Trailers (7 dias)",
+      "required": false
+    },
+    "numero-de-modulos": {
+      "field_id": 108033378,
+      "type": "number",
+      "label": "9 - Número de Módulos (7 dias)",
+      "required": false
+    },
+    "valor-total-proposto-modulos": {
+      "field_id": 108033382,
+      "type": "calculation",
+      "label": "Valor Total Proposto Módulos",
+      "required": false
+    },
+    "valor-proposto": {
+      "field_id": 83205280,
+      "type": "money",
+      "label": "8 - Valor Total Proposto Trailers (7 dias)",
+      "required": false
+    },
+    "valor-total-proposto-modulos-2": {
+      "field_id": 108034006,
+      "type": "money",
+      "label": "8 - Valor Total Proposto Módulos (7 dias)",
+      "required": false
+    },
+    "valor-total-fechado-modulos": {
+      "field_id": 108033383,
+      "type": "calculation",
+      "label": "Valor Total Fechado Módulos",
+      "required": false
+    },
+    "8-valor-proposto-frete-7-dias": {
+      "field_id": 240262853,
+      "type": "money",
+      "label": "8 - Valor Proposto Frete (7 dias)              ",
+      "required": false
+    },
+    "valor-fechado": {
+      "field_id": 83205281,
+      "type": "money",
+      "label": "8 - Valor Total Fechado Trailers (7 dias)",
+      "required": false
+    },
+    "valor-total-fechado-modulos-2": {
+      "field_id": 108034007,
+      "type": "money",
+      "label": "8 - Valor Total Fechado Módulos (7 dias)",
+      "required": false
+    },
+    "8-valor-fechado-frete-7-dias": {
+      "field_id": 240262854,
+      "type": "money",
+      "label": "8 - Valor Fechado Frete (7 dias)               ",
+      "required": false
+    },
+    "data-1deg-pagamento": {
+      "field_id": 149039187,
+      "type": "date",
+      "label": "Data 1° Pagamento",
+      "required": false
+    },
+    "valor-por-diariatrailer": {
+      "field_id": 104948718,
+      "type": "calculation",
+      "label": "Valor Proposto por diária/trailer",
+      "required": false
+    },
+    "valor-fechado-por-diariatrailer": {
+      "field_id": 105598058,
+      "type": "calculation",
+      "label": "Valor Fechado por diária/trailer",
+      "required": false
+    },
+    "valor-proposto-por-diariamodulo": {
+      "field_id": 108033381,
+      "type": "calculation",
+      "label": "Valor Proposto por diária/módulo",
+      "required": false
+    },
+    "valor-fechado-por-diariamodulo": {
+      "field_id": 108033384,
+      "type": "calculation",
+      "label": "Valor Fechado por diária/módulo",
+      "required": false
+    },
+    "data-fechamento-contrato": {
+      "field_id": 83205285,
+      "type": "date",
+      "label": "Data Fechamento Contrato (7 dias)",
+      "required": false
+    },
+    "data-do-evento-cancelado": {
+      "field_id": 84666722,
+      "type": "date",
+      "label": "Data do Evento Cancelado (7 dias)",
+      "required": false
+    },
+    "custos-frete": {
+      "field_id": 96821381,
+      "type": "money",
+      "label": "10 - Custos: Frete (7 dias)",
+      "required": false
+    },
+    "custos-tecnico": {
+      "field_id": 96821383,
+      "type": "money",
+      "label": "10 - Custos: Técnico/Alimentação (7 dias)",
+      "required": false
+    },
+    "custos-hospedagem": {
+      "field_id": 96821385,
+      "type": "money",
+      "label": "10 - Custos: Hospedagem (7 dias)",
+      "required": false
+    },
+    "custos-limpa-fossa": {
+      "field_id": 96821386,
+      "type": "money",
+      "label": "10 - Custos: Limpa Fossa (7 dias)",
+      "required": false
+    },
+    "custos-insumos": {
+      "field_id": 96821384,
+      "type": "money",
+      "label": "10 - Custos: Insumos (7 dias)",
+      "required": false
+    },
+    "custos-limpezaalimentacao": {
+      "field_id": 96821382,
+      "type": "money",
+      "label": "10 - Custos: Limpeza/Alimentação (7 dias)",
+      "required": false
+    },
+    "comissao-de-vendas": {
+      "field_id": 96826999,
+      "type": "money",
+      "label": "10 - Comissão de Vendas (BV) (-) (7 dias)",
+      "required": false
+    },
+    "repasse-outras-franquias": {
+      "field_id": 96827000,
+      "type": "money",
+      "label": "10 - Repasse Outras Franquias (7 dias)",
+      "required": false
+    },
+    "comissao-por-repasse": {
+      "field_id": 100691848,
+      "type": "money",
+      "label": "10 - Comissão por Indicação (+) (7 dias)",
+      "required": false
+    },
+    "calculo": {
+      "field_id": 97150676,
+      "type": "calculation",
+      "label": "Custo Total",
+      "required": false
+    },
+    "evento-finalizado": {
+      "field_id": 261883311,
+      "type": "category",
+      "label": "Evento Finalizado",
+      "required": false
+    }
+  },
+  "categories": {
+    "categoria": {
+      "options": {
+        "Fechado": 1,
+        "Aberto": 2
+      }
+    },
+    "responsavel-pelo-atendimento": {
+      "options": {
+        "Marcela": 1,
+        "Ana": 4,
+        "Eder - Central de Vendas": 3
+      }
+    },
+    "interesse": {
+      "options": {
+        "Franquia": 1,
+        "Evento": 2,
+        "Outros": 3,
+        "Cine Drive": 4
+      }
+    },
+    "encaminhado": {
+      "options": {
+        "Campinas": 1,
+        "Antiga Franquia Rio de Janeiro (Daiane)": 2,
+        "Ribeirão Preto": 3,
+        "Costa do Sol": 4,
+        "Litoral Norte": 5,
+        "Recife": 6,
+        "Belo Horizonte": 7,
+        "Vitória": 8,
+        "Nova Franquia Rio de Janeiro (Fred)": 9
+      }
+    },
+    "origem-2": {
+      "options": {
+        "Site": 1,
+        "Facebook": 2,
+        "Outros": 3,
+        "Evento": 4,
+        "Franquia": 5,
+        "Ana": 6,
+        "Central de Vendas": 7,
+        "Google": 8
+      }
+    },
+    "4-perfil-do-evento-7-dias": {
+      "options": {
+        "Casamento": 1,
+        "Corporativo": 2,
+        "Filmagem/Publicitário": 3,
+        "Particular": 4,
+        "Imobiliário": 5,
+        "Show / Festival": 6,
+        "Esportivo": 7,
+        "Formatura": 8,
+        "Food Truck / Gastronômico": 9,
+        "Aniversário": 10,
+        "Bodas": 11,
+        "Batizado": 12,
+        "Feira / Congresso": 13,
+        "Evento Comemorativo": 14,
+        "Leilão": 15,
+        "Carnaval": 16,
+        "Festa Junina/Julina": 17,
+        "Reveillon": 18,
+        "Agro / Pecuário": 19,
+        "Balada / Festa": 20,
+        "Obra/Reforma": 21,
+        "Beneficente": 22,
+        "Cine Drive": 23,
+        "Mini Wedding": 24,
+        "Camping": 25,
+        "Churrasco": 26,
+        "Live/Show": 27,
+        "Religioso": 28,
+        "Filmagem": 29,
+        "Acampamento": 30,
+        "UPA COVID": 31,
+        "Feira": 32
+      }
+    },
+    "tipo-de-atividade": {
+      "options": {
+        "Cerimonial": 1,
+        "Decorador": 2,
+        "Decorador (a)": 7,
+        "Local de Evento": 3,
+        "Agencia de Eventos": 4,
+        "Cliente Direto - Empresa": 5,
+        "Cliente Direto - Noiva (o)": 6,
+        "Empresa de Locação de Equipamentos": 10,
+        "Empresa de Locação": 8,
+        "Cliente Direto - Noiva": 9,
+        "Buffet": 11,
+        "Assessor de Eventos": 12
+      }
+    },
+    "estado": {
+      "options": {
+        "Acre": 1,
+        "Alagoas": 2,
+        "Amapá": 3,
+        "Amazonas": 4,
+        "Bahia": 5,
+        "Ceará": 6,
+        "Distrito Federal": 7,
+        "Espírito Santo": 8,
+        "Goiás": 9,
+        "Maranhão": 10,
+        "Mato Grosso": 11,
+        "Mato Grosso do Sul": 12,
+        "Minas Gerais": 13,
+        "Pará": 14,
+        "Paraíba": 15,
+        "Paraná": 16,
+        "Pernambuco": 17,
+        "Piauí": 18,
+        "Rio de Janeiro": 19,
+        "Rio Grande do Norte": 20,
+        "Rio Grande do Sul": 21,
+        "Rondônia": 22,
+        "Roraima": 23,
+        "Santa Catarina": 24,
+        "São Paulo": 25,
+        "Sergipe": 26,
+        "Tocantins": 27
+      }
+    },
+    "area-da-franquia": {
+      "options": {
+        "Campinas": 1,
+        "Fora": 2,
+        "Outra Franquia": 3,
+        "Ribeirão Preto": 10,
+        "Litoral Norte": 13,
+        "Costa do Sol": 11,
+        "Rio de Janeiro": 7,
+        "Recife": 12,
+        "Antiga Franquia Rio de Janeiro (Daiane)": 9,
+        "Belo Horizonte": 14,
+        "Vitória": 15,
+        "Nova Franquia Rio de Janeiro (Fred)": 16
+      }
+    },
+    "status-da-prospeccao": {
+      "options": {
+        "Encaminhado": 1,
+        "Orçamento Enviado": 2,
+        "Sem Resposta": 3,
+        "Recusado - Preço": 4,
+        "Evento Cancelado": 5,
+        "Fechado": 6,
+        "E-mail de Apresentação": 7,
+        "Recusado - Acesso": 8,
+        "Recusado": 9,
+        "Recusado - sem motivo declarado": 10,
+        "Recusa da Franquia": 11,
+        "Recusado pela Franquia": 12,
+        "Recusado - sem motivo": 13,
+        "Repassado para Outro Franquiado": 14,
+        "Recusado - Banheiro Químico": 15
+      }
+    },
+    "evento-finalizado": {
+      "options": {
+        "Enviar Pesquisa": 1,
+        "Não Enviar Pesquisa": 2
+      }
+    }
+  }
+}

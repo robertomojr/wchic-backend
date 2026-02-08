@@ -1,0 +1,710 @@
+{
+  "version": "v1",
+  "generated_at": "2026-02-07T17:16:56.880Z",
+  "fields": [
+    {
+      "field_key": "4_perfil_do_evento_7_dias",
+      "podio_external_id": "4-perfil-do-evento-7-dias",
+      "type": "category",
+      "description": "4 - Perfil do Evento (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "4_tipo_de_evento_7_dias",
+      "podio_external_id": "4-tipo-de-evento-7-dias",
+      "type": "category",
+      "description": "4 - Tipo de Evento (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_fechado_frete",
+      "podio_external_id": "8-valor-fechado-frete",
+      "type": "money",
+      "description": "8 - Valor Fechado Frete",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_fechado_frete_7_dias",
+      "podio_external_id": "8-valor-fechado-frete-7-dias",
+      "type": "money",
+      "description": "8 - Valor Fechado Frete (7 dias)               ",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_fechado_modulo_2_cabines",
+      "podio_external_id": "8-valor-fechado-modulo-2-cabines",
+      "type": "money",
+      "description": "8 - Valor Fechado Módulo 2 Cabines",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_fechado_modulo_4_cabines",
+      "podio_external_id": "8-valor-fechado-modulo-4-cabines",
+      "type": "money",
+      "description": "8 - Valor Fechado Módulo 4 Cabines",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_fechado_modulos_7_dias",
+      "podio_external_id": "8-valor-fechado-modulos-7-dias",
+      "type": "money",
+      "description": "8 - Valor Fechado Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_proposto_frete",
+      "podio_external_id": "8-valor-proposto-frete",
+      "type": "money",
+      "description": "8 - Valor Proposto Frete",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_proposto_frete_7_dias",
+      "podio_external_id": "8-valor-proposto-frete-7-dias",
+      "type": "money",
+      "description": "8 - Valor Proposto Frete (7 dias)              ",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_proposto_modulo_2_cabines",
+      "podio_external_id": "8-valor-proposto-modulo-2-cabines",
+      "type": "money",
+      "description": "8 - Valor Proposto Módulo 2 Cabines",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_proposto_modulo_4_cabines",
+      "podio_external_id": "8-valor-proposto-modulo-4-cabines",
+      "type": "money",
+      "description": "8 - Valor Proposto Módulo 4 Cabines",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "8_valor_proposto_modulos_7_dias",
+      "podio_external_id": "8-valor-proposto-modulos-7-dias",
+      "type": "money",
+      "description": "8 - Valor Proposto Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "9_numero_de_modulos_7_dias",
+      "podio_external_id": "9-numero-de-modulos-7-dias",
+      "type": "number",
+      "description": "9 - Número de Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "area_da_franquia",
+      "podio_external_id": "area-da-franquia",
+      "type": "category",
+      "description": "Área da Franquia",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "calculo",
+      "podio_external_id": "calculo",
+      "type": "calculation",
+      "description": "Custo Total",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "categoria",
+      "podio_external_id": "categoria",
+      "type": "category",
+      "description": "Estado",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "cidade",
+      "podio_external_id": "cidade",
+      "type": "text",
+      "description": "Cidade",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "cidade_do_evento",
+      "podio_external_id": "cidade-do-evento",
+      "type": "text",
+      "description": "Cidade do Evento (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "codigo",
+      "podio_external_id": "codigo",
+      "type": "number",
+      "description": "Código",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "codigo_ibge",
+      "podio_external_id": "codigo-ibge",
+      "type": "number",
+      "description": "Codigo IBGE",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "codigo_ibge_2",
+      "podio_external_id": "codigo-ibge-2",
+      "type": "text",
+      "description": "Codigo IBGE",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "comissao_de_vendas",
+      "podio_external_id": "comissao-de-vendas",
+      "type": "money",
+      "description": "10 - Comissão de Vendas (BV) (-) (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "comissao_por_repasse",
+      "podio_external_id": "comissao-por-repasse",
+      "type": "money",
+      "description": "10 - Comissão por Indicação (+) (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "contato",
+      "podio_external_id": "contato",
+      "type": "contact",
+      "description": "2 - Contato (48h)",
+      "format": "",
+      "required_policy": "required_in_podio"
+    },
+    {
+      "field_key": "custos_frete",
+      "podio_external_id": "custos-frete",
+      "type": "money",
+      "description": "10 - Custos: Frete (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "custos_hospedagem",
+      "podio_external_id": "custos-hospedagem",
+      "type": "money",
+      "description": "10 - Custos: Hospedagem (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "custos_insumos",
+      "podio_external_id": "custos-insumos",
+      "type": "money",
+      "description": "10 - Custos: Insumos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "custos_limpa_fossa",
+      "podio_external_id": "custos-limpa-fossa",
+      "type": "money",
+      "description": "10 - Custos: Limpa Fossa (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "custos_limpezaalimentacao",
+      "podio_external_id": "custos-limpezaalimentacao",
+      "type": "money",
+      "description": "10 - Custos: Limpeza/Alimentação (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "custos_tecnico",
+      "podio_external_id": "custos-tecnico",
+      "type": "money",
+      "description": "10 - Custos: Técnico/Alimentação (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_1deg_pagamento",
+      "podio_external_id": "data-1deg-pagamento",
+      "type": "date",
+      "description": "Data 1° Pagamento",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_acompanhamento",
+      "podio_external_id": "data-acompanhamento",
+      "type": "date",
+      "description": "Data Acompanhamento",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_central_de_vendas_48h7_dias",
+      "podio_external_id": "data-central-de-vendas-48h7-dias",
+      "type": "date",
+      "description": "Data Central de Vendas (48h/7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_da_desmontagem_7_dias",
+      "podio_external_id": "data-da-desmontagem-7-dias",
+      "type": "date",
+      "description": "Data da Desmontagem (7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_da_montagem_7_dias",
+      "podio_external_id": "data-da-montagem-7-dias",
+      "type": "date",
+      "description": "Data da Montagem (7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_de_acompanhamento",
+      "podio_external_id": "data-de-acompanhamento",
+      "type": "date",
+      "description": "Data de Acompanhamento (48h / 7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_desmontagem_7_dias",
+      "podio_external_id": "data-desmontagem-7-dias",
+      "type": "date",
+      "description": "Data Desmontagem (7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_do_1o_contato",
+      "podio_external_id": "data-do-1o-contato",
+      "type": "date",
+      "description": "Data da Solicitação (48h)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_do_contato",
+      "podio_external_id": "data-do-contato",
+      "type": "date",
+      "description": "Data do Contato",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_do_evento",
+      "podio_external_id": "data-do-evento",
+      "type": "date",
+      "description": "Data do Evento",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_do_evento_cancelado",
+      "podio_external_id": "data-do-evento-cancelado",
+      "type": "date",
+      "description": "Data do Evento Cancelado (7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_fechamento_contrato",
+      "podio_external_id": "data-fechamento-contrato",
+      "type": "date",
+      "description": "Data Fechamento Contrato",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "data_montagem_7_dias",
+      "podio_external_id": "data-montagem-7-dias",
+      "type": "date",
+      "description": "Data Montagem (7 dias)",
+      "format": "YYYY-MM-DD",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "decisor",
+      "podio_external_id": "decisor",
+      "type": "category",
+      "description": "Decisor",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "e_mail",
+      "podio_external_id": "e-mail",
+      "type": "text",
+      "description": "E-mail",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "encaminhado",
+      "podio_external_id": "encaminhado",
+      "type": "category",
+      "description": "Encaminhado",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "estado",
+      "podio_external_id": "estado",
+      "type": "text",
+      "description": "Estado",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "evento_finalizado",
+      "podio_external_id": "evento-finalizado",
+      "type": "category",
+      "description": "Evento Finalizado",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "historico",
+      "podio_external_id": "historico",
+      "type": "text",
+      "description": "Histórico",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "id_externo",
+      "podio_external_id": "id-externo",
+      "type": "text",
+      "description": "ID Externo",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "interesse",
+      "podio_external_id": "interesse",
+      "type": "category",
+      "description": "Interesse",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "motivo",
+      "podio_external_id": "motivo",
+      "type": "text",
+      "description": "Motivo",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "nome_do_evento",
+      "podio_external_id": "nome-do-evento",
+      "type": "text",
+      "description": "2 - Nome do Evento (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "numero",
+      "podio_external_id": "numero",
+      "type": "number",
+      "description": "Número",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "numero_de_diarias",
+      "podio_external_id": "numero-de-diarias",
+      "type": "number",
+      "description": "9 - Número de Diárias (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "numero_de_modulos",
+      "podio_external_id": "numero-de-modulos",
+      "type": "number",
+      "description": "9 - Número de Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "numero_de_trailers",
+      "podio_external_id": "numero-de-trailers",
+      "type": "number",
+      "description": "9 - Número de Trailers (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "origem",
+      "podio_external_id": "origem",
+      "type": "text",
+      "description": "3 - Origem Outros (48h)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "origem_2",
+      "podio_external_id": "origem-2",
+      "type": "category",
+      "description": "3 - Origem (48h)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "origem_do_contrato",
+      "podio_external_id": "origem-do-contrato",
+      "type": "category",
+      "description": "Origem do Contato",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "perfil_do_evento",
+      "podio_external_id": "perfil-do-evento",
+      "type": "text",
+      "description": "Perfil do Evento",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "perfil_do_evento_2",
+      "podio_external_id": "perfil-do-evento-2",
+      "type": "category",
+      "description": "Perfil do Evento",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "publico_do_evento_qtde_pessoas",
+      "podio_external_id": "publico-do-evento-qtde-pessoas",
+      "type": "text",
+      "description": "Público do Evento (Qtde Pessoas)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "publico_do_evento_qtde_pessoas_2",
+      "podio_external_id": "publico-do-evento-qtde-pessoas-2",
+      "type": "number",
+      "description": "Público do Evento (Qtde Pessoas)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "repasse_outras_franquias",
+      "podio_external_id": "repasse-outras-franquias",
+      "type": "money",
+      "description": "10 - Repasse Outras Franquias (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "responsavel_pelo_atendimento",
+      "podio_external_id": "responsavel-pelo-atendimento",
+      "type": "category",
+      "description": "Responsável pelo Atendimento",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "site",
+      "podio_external_id": "site",
+      "type": "embed",
+      "description": "Site",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "solicitacao",
+      "podio_external_id": "solicitacao",
+      "type": "text",
+      "description": "Solicitação",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "status",
+      "podio_external_id": "status",
+      "type": "category",
+      "description": "Status",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "status_2",
+      "podio_external_id": "status-2",
+      "type": "category",
+      "description": "Status",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "status_da_prospeccao",
+      "podio_external_id": "status-da-prospeccao",
+      "type": "category",
+      "description": "5 - Status da Prospecção (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "telefone",
+      "podio_external_id": "telefone",
+      "type": "text",
+      "description": "Telefone",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "tipo_de_atividade",
+      "podio_external_id": "tipo-de-atividade",
+      "type": "category",
+      "description": "4 - Perfil do Cliente (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "tipo_de_evento",
+      "podio_external_id": "tipo-de-evento",
+      "type": "text",
+      "description": "Tipo de Evento",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "title",
+      "podio_external_id": "title",
+      "type": "text",
+      "description": "Nome",
+      "format": "",
+      "required_policy": "required_in_podio"
+    },
+    {
+      "field_key": "titulo",
+      "podio_external_id": "titulo",
+      "type": "text",
+      "description": "2 - Empresa/Nome (48h)",
+      "format": "",
+      "required_policy": "required_in_podio"
+    },
+    {
+      "field_key": "valor_fechado",
+      "podio_external_id": "valor-fechado",
+      "type": "money",
+      "description": "Valor Fechado",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_fechado_por_diariamodulo",
+      "podio_external_id": "valor-fechado-por-diariamodulo",
+      "type": "calculation",
+      "description": "Valor Fechado por diária/módulo",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_fechado_por_diariatrailer",
+      "podio_external_id": "valor-fechado-por-diariatrailer",
+      "type": "calculation",
+      "description": "Valor Fechado por diária/trailer",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_por_diariatrailer",
+      "podio_external_id": "valor-por-diariatrailer",
+      "type": "calculation",
+      "description": "Valor Proposto por diária/trailer",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_proposto",
+      "podio_external_id": "valor-proposto",
+      "type": "money",
+      "description": "8 - Valor Total Proposto Trailers (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_proposto_por_diariamodulo",
+      "podio_external_id": "valor-proposto-por-diariamodulo",
+      "type": "calculation",
+      "description": "Valor Proposto por diária/módulo",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_fechado_modulos",
+      "podio_external_id": "valor-total-fechado-modulos",
+      "type": "calculation",
+      "description": "Valor Total Fechado Módulos",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_fechado_modulos_2",
+      "podio_external_id": "valor-total-fechado-modulos-2",
+      "type": "money",
+      "description": "8 - Valor Total Fechado Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_fechado_trailers",
+      "podio_external_id": "valor-total-fechado-trailers",
+      "type": "calculation",
+      "description": "Valor Total Fechado Trailers",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_proposto_modulos",
+      "podio_external_id": "valor-total-proposto-modulos",
+      "type": "calculation",
+      "description": "Valor Total Proposto Módulos",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_proposto_modulos_2",
+      "podio_external_id": "valor-total-proposto-modulos-2",
+      "type": "money",
+      "description": "8 - Valor Total Proposto Módulos (7 dias)",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    },
+    {
+      "field_key": "valor_total_proposto_trailers",
+      "podio_external_id": "valor-total-proposto-trailers",
+      "type": "calculation",
+      "description": "Valor Total Proposto Trailers",
+      "format": "",
+      "required_policy": "optional_in_podio"
+    }
+  ]
+}

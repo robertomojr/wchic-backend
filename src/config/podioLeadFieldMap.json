@@ -1,0 +1,11 @@
+{
+  "tipo_evento": "FIELD_ID_TIPO_EVENTO",
+  "cidade": "FIELD_ID_CIDADE",
+  "estado": "FIELD_ID_ESTADO",
+  "data_inicio": "FIELD_ID_DATA_INICIO",
+  "data_fim": "FIELD_ID_DATA_FIM",
+  "duracao": "FIELD_ID_DURACAO",
+  "pessoas": "FIELD_ID_PESSOAS",
+  "nome_contato": "FIELD_ID_NOME",
+  "email": "FIELD_ID_EMAIL"
+}

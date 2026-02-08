@@ -1,0 +1,18 @@
+{
+  "franquia": {
+    "status": "FIELD_ID_STATUS",
+    "status_value_contatado": "Contatado",
+    "data_evento": "FIELD_ID_DATA_EVENTO",
+    "data_fim": "FIELD_ID_DATA_FIM",
+    "etapa": "FIELD_ID_ETAPA",
+    "campos_pos_evento": ["FIELD_ID_POS_1", "FIELD_ID_POS_2"]
+  },
+  "franqueadora": {
+    "status": "FIELD_ID_STATUS",
+    "status_value_contatado": "Contatado",
+    "data_evento": "FIELD_ID_DATA_EVENTO",
+    "data_fim": "FIELD_ID_DATA_FIM",
+    "etapa": "FIELD_ID_ETAPA",
+    "campos_pos_evento": ["FIELD_ID_POS_1", "FIELD_ID_POS_2"]
+  }
+}
