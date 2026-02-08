@@ -30,24 +30,25 @@ export async function findOrCreateLead(params: {
   return created.rows[0];
 }
 
+
 export async function updateLeadRouting(params: {
   leadId: string;
   franchiseId: number | null;
-  territoryStatus: "ativo" | "inativo" | "fallback" | null;
 }) {
   await query(
     `
     UPDATE leads
     SET
       franchise_id = $1,
-      territory_status = $2,
       routed_at = NOW(),
       updated_at = NOW()
-    WHERE id = $3
+    WHERE id = $2
     `,
-    [params.franchiseId, params.territoryStatus, params.leadId]
+    [params.franchiseId, params.leadId]
   );
 }
+
+
 
 export async function updateLeadStatus(leadId: string, status: string) {
   await query(
