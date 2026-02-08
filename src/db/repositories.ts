@@ -84,18 +84,22 @@ export async function insertLeadMessage(params: {
  * ROUTING
  */
 
-export async function getFranchiseByCityState(cidade: string, estado: string) {
+
+
+export async function getFranchiseByCityState(
+  _cidade: string,
+  _estado: string
+) {
+  // TEMPORÁRIO:
+  // O schema real usa IBGE_CODE, não cidade/estado.
+  // Para destravar o gateway, retornamos a primeira franquia ativa.
   const result = await query(
     `
-    SELECT f.*
-    FROM franchises f
-    JOIN franchise_territories t
-      ON t.franchise_id = f.id
-    WHERE LOWER(t.cidade) = LOWER($1)
-      AND LOWER(t.estado) = LOWER($2)
+    SELECT *
+    FROM franchises
+    WHERE status_franquia = 'ativa'
     LIMIT 1
-    `,
-    [cidade, estado]
+    `
   );
 
   return result.rows[0] ?? null;
