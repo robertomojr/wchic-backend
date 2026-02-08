@@ -7,15 +7,12 @@ if (!process.env.DATABASE_URL) {
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  ssl: { rejectUnauthorized: false }
 });
 
-// função simples para queries
-export function query<T = any>(text: string, params: any[] = []) {
-  return pool.query<T>(text, params);
-}
+export const query = (text: string, params: any[] = []) => {
+  return pool.query(text, params);
+};
 
 export default pool;
 
