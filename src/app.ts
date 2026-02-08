@@ -49,6 +49,8 @@ app.get("/routing/resolve", routingResolve);
 
 // Simulação de lead (POST)
 app.post("/leads/route-test", leadRouteTest);
+app.post("/route-test", leadRouteTest);
+
 
 // Rotas principais
 app.use("/webhook", webhookRouter);
