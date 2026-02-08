@@ -2,24 +2,17 @@ import express from "express";
 import { apiRateLimit } from "./utils/rateLimit.js";
 import { logger } from "./utils/logger.js";
 
+// Rotas
 import { webhookRouter } from "./routes/webhooks.js";
 import { authRouter } from "./routes/auth.js";
-import { conversationsRouter } from "./routes/conversations.js";
-import { leadsRouter } from "./routes/leads.js";
-import { franchisesRouter } from "./routes/franchises.js";
-import { statsRouter } from "./routes/stats.js";
-
-import { podioTest } from "./routes/podioTest.js";
-import { podioExportApps } from "./routes/podioExportApps.js";
-import { podioLeadTest } from "./routes/podioLeadTest.js";
 import { routingResolve } from "./routes/routingResolve.js";
-import { leadRouteTest } from "./routes/leadRouteTest.js";
 import { leadsIntake } from "./routes/leadsIntake.js";
-
 
 export const app = express();
 
-// JSON body + rawBody (para webhook do WhatsApp)
+/**
+ * JSON body + rawBody (necessário para WhatsApp Webhook)
+ */
 app.use(
   express.json({
     verify: (req, _res, buf) => {
@@ -28,43 +21,45 @@ app.use(
   })
 );
 
-// Rate limit global
+/**
+ * Rate limit global
+ */
 app.use(apiRateLimit);
 
-// Home
+/**
+ * Health / Home
+ */
 app.get("/", (_req, res) => {
   res.status(200).send("WChic backend OK");
 });
 
-// Healthcheck
 app.get("/health", (_req, res) => {
   res.json({ ok: true });
 });
 
-// Rotas de teste / debug
-app.get("/podio/test", podioTest);
-app.get("/podio/apps/export", podioExportApps);
-app.get("/podio/lead/test", podioLeadTest);
+/**
+ * Gateway lead-first (CANÔNICO)
+ */
+app.post("/gateway/intake", leadsIntake);
 
-// Roteamento (GET)
+/**
+ * Roteamento (GET)
+ */
 app.get("/routing/resolve", routingResolve);
 
-// Simulação de lead (POST)
-app.post("/leads/route-test", leadRouteTest);
-app.post("/route-test", leadRouteTest);
-app.post("/leads/intake", leadsIntake);
-
-
-
-// Rotas principais
+/**
+ * Webhooks externos (WhatsApp, etc.)
+ */
 app.use("/webhook", webhookRouter);
-app.use("/auth", authRouter);
-app.use("/conversations", conversationsRouter);
-app.use("/leads", leadsRouter);
-app.use("/franchises", franchisesRouter);
-app.use("/stats", statsRouter);
 
-// Handler global de erro (SEMPRE por último)
+/**
+ * Auth (se necessário)
+ */
+app.use("/auth", authRouter);
+
+/**
+ * Handler global de erro (sempre por último)
+ */
 app.use(
   (
     err: Error,
@@ -76,4 +71,3 @@ app.use(
     res.status(500).json({ error: "Internal server error" });
   }
 );
-

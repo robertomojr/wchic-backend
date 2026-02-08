@@ -1,134 +1,144 @@
 import { query } from "./pool.js";
 
-export async function findOrCreateConversation(
-  channel: string,
-  customerPhone: string
-) {
+/**
+ * LEADS
+ */
+
+export async function findOrCreateLead(params: {
+  externalId: string;
+  phoneE164: string;
+  source: string;
+}) {
   const existing = await query(
-    "SELECT id, franchise_id FROM conversations WHERE channel = $1 AND customer_phone = $2",
-    [channel, customerPhone]
+    `SELECT * FROM leads WHERE external_id = $1`,
+    [params.externalId]
   );
 
   if (existing.rows[0]) {
-    await query("UPDATE conversations SET updated_at = NOW() WHERE id = $1", [
-      existing.rows[0].id
-    ]);
     return existing.rows[0];
   }
 
   const created = await query(
-    "INSERT INTO conversations (channel, customer_phone) VALUES ($1, $2) RETURNING id",
-    [channel, customerPhone]
+    `
+    INSERT INTO leads (external_id, phone_e164, source)
+    VALUES ($1, $2, $3)
+    RETURNING *
+    `,
+    [params.externalId, params.phoneE164, params.source]
   );
 
-  return { id: created.rows[0].id, franchise_id: null };
+  return created.rows[0];
 }
 
-export async function insertMessage(
-  conversationId: number,
-  role: string,
-  type: string,
-  text: string,
-  mediaUrl?: string | null
+export async function updateLeadRouting(params: {
+  leadId: string;
+  franchiseId: number | null;
+  territoryStatus: "ativo" | "inativo" | "fallback" | null;
+}) {
+  await query(
+    `
+    UPDATE leads
+    SET
+      franchise_id = $1,
+      territory_status = $2,
+      routed_at = NOW(),
+      updated_at = NOW()
+    WHERE id = $3
+    `,
+    [params.franchiseId, params.territoryStatus, params.leadId]
+  );
+}
+
+export async function updateLeadStatus(
+  leadId: string,
+  status: string
 ) {
   await query(
-    "INSERT INTO messages (conversation_id, role, type, text, media_url) VALUES ($1, $2, $3, $4, $5)",
-    [conversationId, role, type, text, mediaUrl ?? null]
+    `
+    UPDATE leads
+    SET status = $1,
+        updated_at = NOW()
+    WHERE id = $2
+    `,
+    [status, leadId]
   );
 }
 
-export async function upsertLead(
-  conversationId: number,
-  payload: Partial<Record<string, unknown>>
+/**
+ * LEAD MESSAGES (log de canal)
+ */
+
+export async function insertLeadMessage(params: {
+  leadId: string;
+  role: "user" | "agent" | "system";
+  content: string;
+  stage?: string | null;
+}) {
+  await query(
+    `
+    INSERT INTO lead_messages (lead_id, role, content, stage)
+    VALUES ($1, $2, $3, $4)
+    `,
+    [
+      params.leadId,
+      params.role,
+      params.content,
+      params.stage ?? null
+    ]
+  );
+}
+
+/**
+ * ROUTING
+ */
+
+export async function getFranchiseByCityState(
+  cidade: string,
+  estado: string
 ) {
-  const existing = await query("SELECT id FROM leads WHERE conversation_id = $1", [
-    conversationId
-  ]);
-
-  if (existing.rows[0]) {
-    const fields = Object.keys(payload);
-    if (fields.length === 0) return existing.rows[0].id;
-
-    const setFragments = fields.map((field, idx) => `${field} = $${idx + 2}`);
-
-    await query(
-      `UPDATE leads SET ${setFragments.join(
-        ", "
-      )}, updated_at = NOW() WHERE conversation_id = $1`,
-      [conversationId, ...fields.map((field) => (payload as any)[field])]
-    );
-
-    return existing.rows[0].id;
-  }
-
-  const columns = Object.keys(payload);
-  const values = Object.values(payload);
-  const placeholders = columns.map((_, idx) => `$${idx + 2}`).join(", ");
-
   const result = await query(
-    `INSERT INTO leads (conversation_id, ${columns.join(
-      ", "
-    )}) VALUES ($1, ${placeholders}) RETURNING id`,
-    [conversationId, ...values]
-  );
-
-  return result.rows[0].id;
-}
-
-export async function getLeadByConversation(conversationId: number) {
-  const result = await query("SELECT * FROM leads WHERE conversation_id = $1", [
-    conversationId
-  ]);
-  return result.rows[0] ?? null;
-}
-
-export async function getFranchiseByCityState(cidade: string, estado: string) {
-  const result = await query(
-    "SELECT * FROM franchises WHERE LOWER(cidade) = LOWER($1) AND LOWER(estado) = LOWER($2) LIMIT 1",
+    `
+    SELECT f.*
+    FROM franchises f
+    JOIN franchise_territories t
+      ON t.franchise_id = f.id
+    WHERE LOWER(t.cidade) = LOWER($1)
+      AND LOWER(t.estado) = LOWER($2)
+    LIMIT 1
+    `,
     [cidade, estado]
   );
+
   return result.rows[0] ?? null;
 }
 
-export async function updateLeadPodio(
-  leadId: number,
-  franquiaId: string | null,
-  franqueadoraId: string | null
+/**
+ * JOBS
+ */
+
+export async function createJob(
+  type: string,
+  leadId: string,
+  runAt: Date
 ) {
   await query(
-    "UPDATE leads SET podio_item_id_franquia = $1, podio_item_id_franqueadora = $2, updated_at = NOW() WHERE id = $3",
-    [franquiaId, franqueadoraId, leadId]
+    `
+    INSERT INTO jobs (type, lead_id, run_at)
+    VALUES ($1, $2, $3)
+    `,
+    [type, leadId, runAt]
   );
 }
 
-export async function markLeadStatus(conversationId: number, status: string) {
-  await query("UPDATE conversations SET status = $1, updated_at = NOW() WHERE id = $2", [
-    status,
-    conversationId
-  ]);
-}
-
-export async function setConversationFranchise(
-  conversationId: number,
-  franchiseId: number | null
+export async function logJob(
+  jobId: number,
+  message: string
 ) {
   await query(
-    "UPDATE conversations SET franchise_id = $1, updated_at = NOW() WHERE id = $2",
-    [franchiseId, conversationId]
+    `
+    INSERT INTO job_logs (job_id, message)
+    VALUES ($1, $2)
+    `,
+    [jobId, message]
   );
-}
-
-export async function createJob(type: string, leadId: number, runAt: Date) {
-  await query("INSERT INTO jobs (type, lead_id, run_at) VALUES ($1, $2, $3)", [
-    type,
-    leadId,
-    runAt
-  ]);
-}
-
-export async function logJob(jobId: number, message: string) {
-  await query("INSERT INTO job_logs (job_id, message) VALUES ($1, $2)", [
-    jobId,
-    message
-  ]);
 }
