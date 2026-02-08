@@ -13,6 +13,7 @@ import { podioTest } from "./routes/podioTest.js";
 import { podioExportApps } from "./routes/podioExportApps.js";
 import { podioLeadTest } from "./routes/podioLeadTest.js";
 import { routingResolve } from "./routes/routingResolve.js";
+import { leadRouteTest } from "./routes/leadRouteTest.js";
 
 export const app = express();
 
@@ -21,30 +22,33 @@ app.use(
   express.json({
     verify: (req, _res, buf) => {
       (req as any).rawBody = buf.toString();
-    }
+    },
   })
 );
 
 // Rate limit global
 app.use(apiRateLimit);
 
-// Home (pra testar no navegador)
+// Home
 app.get("/", (_req, res) => {
   res.status(200).send("WChic backend OK");
 });
 
-// Healthcheck (pra monitoramento)
+// Healthcheck
 app.get("/health", (_req, res) => {
   res.json({ ok: true });
 });
 
-// Rotas avulsas (DEBUG / DEV)
+// Rotas de teste / debug
 app.get("/podio/test", podioTest);
 app.get("/podio/apps/export", podioExportApps);
 app.get("/podio/lead/test", podioLeadTest);
 
-// Roteamento
+// Roteamento (GET)
 app.get("/routing/resolve", routingResolve);
+
+// Simulação de lead (POST)
+app.post("/leads/route-test", leadRouteTest);
 
 // Rotas principais
 app.use("/webhook", webhookRouter);
