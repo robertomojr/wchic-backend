@@ -9,15 +9,13 @@ export async function findOrCreateLead(params: {
   phoneE164: string;
   source: string;
 }) {
-  const existing = await query(
-    `SELECT * FROM leads WHERE external_id = $1`,
-    [params.externalId]
-  );
+  const existing = await query(`SELECT * FROM leads WHERE external_id = $1`, [
+    params.externalId,
+  ]);
 
   if (existing.rows[0]) return existing.rows[0];
 
-  // IMPORTANT: territory_status precisa ser NULL na criação
-  // para não violar o check constraint quando franchise_id ainda é NULL.
+  // territory_status NULL evita violar constraint quando franchise_id ainda é NULL
   const created = await query(
     `
     INSERT INTO leads (external_id, phone_e164, source, territory_status)
@@ -29,26 +27,6 @@ export async function findOrCreateLead(params: {
 
   return created.rows[0];
 }
-
-
-export async function updateLeadRouting(params: {
-  leadId: string;
-  franchiseId: number | null;
-}) {
-  await query(
-    `
-    UPDATE leads
-    SET
-      franchise_id = $1,
-      routed_at = NOW(),
-      updated_at = NOW()
-    WHERE id = $2
-    `,
-    [params.franchiseId, params.leadId]
-  );
-}
-
-
 
 export async function updateLeadStatus(leadId: string, status: string) {
   await query(
@@ -63,7 +41,7 @@ export async function updateLeadStatus(leadId: string, status: string) {
 }
 
 /**
- * LEAD MESSAGES (log de canal)
+ * LEAD MESSAGES
  */
 
 export async function insertLeadMessage(params: {
@@ -82,32 +60,61 @@ export async function insertLeadMessage(params: {
 }
 
 /**
- * ROUTING
+ * LEAD EVENTS (1 por lead)
+ * Trigger no Supabase roteia quando ibge_code é inserido/atualizado.
  */
 
-
-
-
-export async function getFranchiseByCityState(
-  _cidade: string,
-  _estado: string
-) {
-  // TEMPORÁRIO: não filtra status (enum no banco pode ter valores diferentes)
-  const result = await query(
+export async function upsertLeadEvent(params: {
+  leadId: string;
+  cidade?: string | null;
+  estado?: string | null;
+  ibgeCode?: string | null;
+  eventStartDate?: string | null; // "YYYY-MM-DD"
+  eventEndDate?: string | null; // "YYYY-MM-DD"
+  perfilEventoUniversal?: string | null;
+  pessoasEstimadas?: string | null;
+  decisor?: boolean | null;
+}) {
+  await query(
     `
-    SELECT *
-    FROM franchises
-    ORDER BY id ASC
-    LIMIT 1
-    `
+    INSERT INTO lead_events (
+      lead_id,
+      cidade,
+      estado,
+      ibge_code,
+      event_start_date,
+      event_end_date,
+      perfil_evento_universal,
+      pessoas_estimadas,
+      decisor
+    )
+    VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+    ON CONFLICT (lead_id) DO UPDATE SET
+      cidade = EXCLUDED.cidade,
+      estado = EXCLUDED.estado,
+      ibge_code = EXCLUDED.ibge_code,
+      event_start_date = EXCLUDED.event_start_date,
+      event_end_date = EXCLUDED.event_end_date,
+      perfil_evento_universal = EXCLUDED.perfil_evento_universal,
+      pessoas_estimadas = EXCLUDED.pessoas_estimadas,
+      decisor = EXCLUDED.decisor
+    `,
+    [
+      params.leadId,
+      params.cidade ?? null,
+      params.estado ?? null,
+      params.ibgeCode ?? null,
+      params.eventStartDate ?? null,
+      params.eventEndDate ?? null,
+      params.perfilEventoUniversal ?? null,
+      params.pessoasEstimadas ?? null,
+      params.decisor ?? null,
+    ]
   );
-
-  return result.rows[0] ?? null;
 }
 
-
 /**
- * JOBS
+ * JOBS (opcional)
  */
 
 export async function createJob(type: string, leadId: string, runAt: Date) {
@@ -129,4 +136,3 @@ export async function logJob(jobId: number, message: string) {
     [jobId, message]
   );
 }
-
