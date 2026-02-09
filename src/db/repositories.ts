@@ -87,24 +87,24 @@ export async function insertLeadMessage(params: {
 
 
 
+
 export async function getFranchiseByCityState(
   _cidade: string,
   _estado: string
 ) {
-  // TEMPORÁRIO:
-  // O schema real usa IBGE_CODE, não cidade/estado.
-  // Para destravar o gateway, retornamos a primeira franquia ativa.
+  // TEMPORÁRIO: não filtra status (enum no banco pode ter valores diferentes)
   const result = await query(
     `
     SELECT *
     FROM franchises
-    WHERE status_franquia = 'ativa'
+    ORDER BY id ASC
     LIMIT 1
     `
   );
 
   return result.rows[0] ?? null;
 }
+
 
 /**
  * JOBS
