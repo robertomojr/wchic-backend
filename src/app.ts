@@ -9,6 +9,8 @@ import { leadsIntake } from "./routes/leadsIntake.js";
 
 export const app = express();
 
+app.set("trust proxy", 1); 
+
 /**
  * JSON body + rawBody (necessário para WhatsApp Webhook)
  */
