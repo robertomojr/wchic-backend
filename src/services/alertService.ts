@@ -60,10 +60,10 @@ export async function alert(
     `<p><strong>Mensagem:</strong> ${message}</p>` +
     (details ? `<pre style="background:#f4f4f4;padding:12px;border-radius:4px">${JSON.stringify(details, null, 2)}</pre>` : "");
 
-  // Dispara ambos em paralelo, sem bloquear
+  // Dispara apenas WhatsApp por enquanto
+  // (e-mail será adicionado quando o Render permitir SMTP)
   await Promise.allSettled([
     sendWhatsAppAlert(whatsappText),
-    sendEmailAlert(`[WChic] ${label}`, emailHtml),
   ]);
 }
 
@@ -105,39 +105,38 @@ async function sendWhatsAppAlert(text: string): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// E-mail (Gmail SMTP via nodemailer — importação dinâmica)
+// E-mail (Resend API via HTTPS — funciona no Render Free)
 // ---------------------------------------------------------------------------
 async function sendEmailAlert(subject: string, html: string): Promise<void> {
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
+  const resendApiKey = process.env.RESEND_API_KEY;
   const alertEmail = process.env.ALERT_EMAIL_TO;
 
-  if (!smtpUser || !smtpPass || !alertEmail) {
-    logger.warn("E-mail alert ignorado: SMTP não configurado");
+  if (!resendApiKey || !alertEmail) {
+    logger.warn("E-mail alert ignorado: RESEND_API_KEY ou ALERT_EMAIL_TO não configurados");
     return;
   }
 
   try {
-    // Importação dinâmica para não quebrar o build caso nodemailer não esteja instalado
-    const nodemailer = await import("nodemailer");
-
-    const transporter = nodemailer.default.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: { user: smtpUser, pass: smtpPass },
-    });
-
-    await transporter.sendMail({
-      from: `"WChic Sistema" <${smtpUser}>`,
-      to: alertEmail,
-      subject,
-      html,
-    });
-
-    logger.info("E-mail alert enviado", { to: alertEmail, subject });
+    await axios.post(
+      "https://api.resend.com/emails",
+      {
+        from: "WChic Sistema <onboarding@resend.dev>",
+        to: [alertEmail],
+        subject,
+        html,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${resendApiKey}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    logger.info("E-mail alert enviado via Resend", { to: alertEmail, subject });
   } catch (err: any) {
-    logger.error("Falha ao enviar e-mail alert", { error: err?.message });
+    logger.error("Falha ao enviar e-mail alert", {
+      error: err?.response?.data ?? err?.message,
+    });
   }
 }
 
