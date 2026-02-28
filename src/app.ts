@@ -4,8 +4,10 @@ import { logger } from "./utils/logger.js";
 
 // Rotas
 import { webhookRouter } from "./routes/webhooks.js";
+import { podioWebhookRouter } from "./routes/podioWebhook.js";
 import { authRouter } from "./routes/auth.js";
 import { leadsIntake } from "./routes/leadsIntake.js";
+import { leadsRouter } from "./routes/leads.js";
 
 export const app = express();
 
@@ -44,13 +46,15 @@ app.get("/health", (_req, res) => {
 app.post("/gateway/intake", leadsIntake);
 
 /**
- * Webhooks externos (WhatsApp, etc.)
+ * Webhooks externos (WhatsApp, Podio)
  */
 app.use("/webhook", webhookRouter);
+app.use("/webhook", podioWebhookRouter);
 
 /**
- * Auth (se necessário)
+ * API autenticada
  */
+app.use("/leads", leadsRouter);
 app.use("/auth", authRouter);
 
 /**
