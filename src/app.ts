@@ -5,7 +5,6 @@ import { logger } from "./utils/logger.js";
 // Rotas
 import { webhookRouter } from "./routes/webhooks.js";
 import { authRouter } from "./routes/auth.js";
-import { routingResolve } from "./routes/routingResolve.js";
 import { leadsIntake } from "./routes/leadsIntake.js";
 
 export const app = express();
@@ -41,11 +40,6 @@ app.get("/health", (_req, res) => {
  * Gateway lead-first (CANÔNICO)
  */
 app.post("/gateway/intake", leadsIntake);
-
-/**
- * Roteamento (GET)
- */
-app.get("/routing/resolve", routingResolve);
 
 /**
  * Webhooks externos (WhatsApp, etc.)
