@@ -45,12 +45,14 @@ app.get("/health", (_req, res) => {
  * Remover após validar Tarefa #12.
  */
 app.get("/health/alert-test", async (_req, res) => {
+  // Responde imediatamente, alerta vai em background
+  res.json({ ok: true, message: "Alerta disparado em background — verifique WhatsApp e e-mail em alguns segundos" });
+
   const { alert } = await import("./services/alertService.js");
-  await alert("generic_error", "Teste de alerta WChic — sistema funcionando!", {
+  alert("generic_error", "Teste de alerta WChic — sistema funcionando!", {
     origem: "health/alert-test",
     timestamp: new Date().toISOString(),
-  });
-  res.json({ ok: true, message: "Alerta disparado — verifique WhatsApp e e-mail" });
+  }).catch((err) => console.error("Erro no alert-test:", err?.message));
 });
 
 /**
