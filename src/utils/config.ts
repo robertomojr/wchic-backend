@@ -38,6 +38,23 @@ export const config = {
     clientId: optional("PODIO_CLIENT_ID"),
     clientSecret: optional("PODIO_CLIENT_SECRET"),
     appIdFranqueadora: optional("PODIO_APP_ID_FRANQUEADORA"),
+    // Credenciais por workspace (app-level OAuth)
+    franqueadora: {
+      appId: optional("PODIO_FRANQUEADORA_APP_ID", "10094649"),
+      appToken: optional("PODIO_FRANQUEADORA_APP_TOKEN"),
+    },
+    campinas: {
+      appId: optional("PODIO_CAMPINAS_APP_ID", "10777978"),
+      appToken: optional("PODIO_CAMPINAS_APP_TOKEN"),
+    },
+    litoralNorte: {
+      appId: optional("PODIO_LITORAL_NORTE_APP_ID", "13683578"),
+      appToken: optional("PODIO_LITORAL_NORTE_APP_TOKEN"),
+    },
+    rioBh: {
+      appId: optional("PODIO_RIO_BH_APP_ID", "12876626"),
+      appToken: optional("PODIO_RIO_BH_APP_TOKEN"),
+    },
   },
 
   admin: {

@@ -4,6 +4,8 @@ import {
   insertLeadMessage,
   upsertLeadEvent,
 } from "../db/repositories.js";
+import { syncLeadToPodio } from "../services/podioSyncService.js";
+import { logger } from "../utils/logger.js";
 
 /**
  * POST /gateway/intake
@@ -79,6 +81,20 @@ export async function leadsIntake(req: Request, res: Response) {
     pessoasEstimadas: pessoas_estimadas ? String(pessoas_estimadas) : null,
     decisor: typeof decisor === "boolean" ? decisor : null,
   });
+
+  /**
+   * 6) Tenta sincronizar com Podio (não-bloqueante)
+   * Só faz efeito se ibge_code foi enviado (trigger já rodou e definiu franchise_id).
+   * Erros do Podio não impedem a resposta ao cliente.
+   */
+  if (ibge_code) {
+    syncLeadToPodio(lead.id).catch((err) => {
+      logger.error("Podio sync falhou (intake)", {
+        lead_id: lead.id,
+        error: String(err?.message ?? err),
+      });
+    });
+  }
 
   return res.json({
     ok: true,
