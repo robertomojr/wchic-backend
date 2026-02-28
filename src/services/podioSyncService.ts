@@ -124,19 +124,13 @@ function buildCanonical(row: any, workspaceKey: WorkspaceKey): CanonicalLead {
     "id-externo": row.external_id,
     telefone: row.phone_e164 ?? "",
 
-    // Campo "contato" (type: contact) — usado em campinas e outras franquias
-    // Podio aceita array de objetos {type, value}
-    contato: row.phone_e164
-      ? [{ type: "phone", value: row.phone_e164 }]
-      : undefined,
+    // NOTA: campo "contato" em Campinas é tipo "contact" (referência a outro app Podio)
+    // e espera um item_id inteiro — não enviamos por enquanto.
 
     status: "Novo",
     interesse: "Evento",
     "data-do-contato": { start: today },
   };
-
-  // Remove undefined
-  if (!fields["contato"]) delete fields["contato"];
 
   const areaLabel = WORKSPACE_TO_AREA_LABEL[workspaceKey];
   if (areaLabel) {
