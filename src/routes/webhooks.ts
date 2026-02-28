@@ -10,6 +10,7 @@ import {
   insertLeadMessage,
   upsertLeadEvent,
 } from "../db/repositories.js";
+import { alert } from "../services/alertService.js";
 
 export const webhookRouter = Router();
 
@@ -64,6 +65,9 @@ webhookRouter.post("/whatsapp", async (req: Request, res: Response) => {
     }
   } catch (err) {
     logger.error("WhatsApp webhook processing error", { error: String(err) });
+    alert("whatsapp_webhook_error", "Erro ao processar mensagem do WhatsApp", {
+      error: String(err),
+    }).catch(() => {});
   }
 });
 

@@ -5,6 +5,7 @@ import {
   upsertLeadEvent,
 } from "../db/repositories.js";
 import { syncLeadToPodio } from "../services/podioSyncService.js";
+import { alert } from "../services/alertService.js";
 import { logger } from "../utils/logger.js";
 
 /**
@@ -94,6 +95,15 @@ export async function leadsIntake(req: Request, res: Response) {
         error: String(err?.message ?? err),
       });
     });
+  } else if (cidade) {
+    // Lead entrou com cidade mas sem ibge_code — pode não ser roteado
+    alert("lead_not_routed", "Lead recebido sem ibge_code — roteamento impossível", {
+      lead_id: lead.id,
+      external_id: lead.external_id,
+      cidade: cidade ?? "N/A",
+      estado: estado ?? "N/A",
+      telefone: phoneE164,
+    }).catch(() => {});
   }
 
   return res.json({

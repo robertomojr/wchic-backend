@@ -62,4 +62,11 @@ export const config = {
     pass: optional("ADMIN_PASS", "change_me"),
     jwtSecret: optional("JWT_SECRET", "change_me"),
   },
+
+  alerts: {
+    whatsappTo: optional("ALERT_WHATSAPP_TO"),   // ex: +5519998479729
+    emailTo: optional("ALERT_EMAIL_TO"),          // ex: robertomojr@gmail.com
+    smtpUser: optional("SMTP_USER"),              // Gmail: robertomojr@gmail.com
+    smtpPass: optional("SMTP_PASS"),              // Gmail App Password (16 chars)
+  },
 };

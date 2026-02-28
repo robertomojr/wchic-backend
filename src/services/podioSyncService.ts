@@ -8,6 +8,7 @@
 import { upsertLeadToPodio, type WorkspaceKey, type CanonicalLead } from "./podioService.js";
 import { query } from "../db/pool.js";
 import { logger } from "../utils/logger.js";
+import { alert } from "./alertService.js";
 
 // ---------------------------------------------------------------------------
 // Mapeamentos de workspace
@@ -201,7 +202,13 @@ export async function syncLeadToPodio(leadId: string): Promise<PodioSyncResult> 
     if (r.itemId) await saveItemId(leadId, "franqueadora", r.itemId);
     logger.info("Podio sync OK: franqueadora", { leadId });
   } catch (err: any) {
-    logger.error("Podio sync ERRO: franqueadora", { leadId, detail: JSON.stringify(err?.response?.data ?? err?.message) });
+    const detail = err?.response?.data ?? err?.message;
+    logger.error("Podio sync ERRO: franqueadora", { leadId, detail: JSON.stringify(detail) });
+    alert("podio_sync_error", "Falha ao sincronizar lead com Podio (franqueadora)", {
+      lead_id: leadId,
+      external_id: row.external_id,
+      error: JSON.stringify(detail).slice(0, 300),
+    }).catch(() => {});
     throw err;
   }
 
@@ -213,7 +220,14 @@ export async function syncLeadToPodio(leadId: string): Promise<PodioSyncResult> 
       if (r.itemId) await saveItemId(leadId, workspaceKey, r.itemId);
       logger.info(`Podio sync OK: ${workspaceKey}`, { leadId });
     } catch (err: any) {
-      logger.error(`Podio sync ERRO: ${workspaceKey}`, { leadId, detail: JSON.stringify(err?.response?.data ?? err?.message) });
+      const detail = err?.response?.data ?? err?.message;
+      logger.error(`Podio sync ERRO: ${workspaceKey}`, { leadId, detail: JSON.stringify(detail) });
+      alert("podio_sync_error", `Falha ao sincronizar lead com Podio (${workspaceKey})`, {
+        lead_id: leadId,
+        external_id: row.external_id,
+        workspace: workspaceKey,
+        error: JSON.stringify(detail).slice(0, 300),
+      }).catch(() => {});
       throw err;
     }
   }
