@@ -160,7 +160,7 @@ function buildCanonical(row: any, workspaceKey: WorkspaceKey): CanonicalLead {
   }
 
   if (row.event_start_date) {
-    const dt = String(row.event_start_date).split("T")[0];
+    const dt = toDateStr(row.event_start_date);
     fields["data-do-evento"] = { start: `${dt} 00:00:00` };
     fields["data-do-1o-contato"] = { start: today };
     fields["data-central-de-vendas-48h7-dias"] = { start: today };
@@ -186,12 +186,20 @@ function buildCanonical(row: any, workspaceKey: WorkspaceKey): CanonicalLead {
   return { external_id: row.external_id, fields };
 }
 
+/** Converte Date object ou string ISO do PostgreSQL → "YYYY-MM-DD" */
+function toDateStr(value: any): string {
+  if (!value) return "";
+  const d = value instanceof Date ? value : new Date(value);
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 function buildTitle(row: any): string {
   const phone = row.phone_e164 ?? "sem-telefone";
   const cidade = row.cidade ? ` — ${row.cidade}` : "";
-  const data = row.event_start_date
-    ? ` (${String(row.event_start_date).split("T")[0]})`
-    : "";
+  const data = row.event_start_date ? ` (${toDateStr(row.event_start_date)})` : "";
   return `Lead WA ${phone}${cidade}${data}`;
 }
 
