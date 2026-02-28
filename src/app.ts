@@ -41,6 +41,19 @@ app.get("/health", (_req, res) => {
 });
 
 /**
+ * GET /health/alert-test — Dispara alerta de teste (WhatsApp + e-mail)
+ * Remover após validar Tarefa #12.
+ */
+app.get("/health/alert-test", async (_req, res) => {
+  const { alert } = await import("./services/alertService.js");
+  await alert("generic_error", "Teste de alerta WChic — sistema funcionando!", {
+    origem: "health/alert-test",
+    timestamp: new Date().toISOString(),
+  });
+  res.json({ ok: true, message: "Alerta disparado — verifique WhatsApp e e-mail" });
+});
+
+/**
  * Gateway lead-first (CANÔNICO)
  */
 app.post("/gateway/intake", leadsIntake);

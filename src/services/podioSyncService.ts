@@ -180,6 +180,12 @@ export async function syncLeadToPodio(leadId: string): Promise<PodioSyncResult> 
 
   if (!row.franchise_id) {
     logger.info("Lead não roteado — Podio sync ignorado", { leadId });
+    alert("lead_not_routed", "Lead com ibge_code não encontrou franquia no banco", {
+      lead_id: leadId,
+      external_id: row.external_id,
+      ibge_code: row.ibge_code ?? "N/A",
+      cidade: row.cidade ?? "N/A",
+    }).catch(() => {});
     return { ok: false, reason: "not_routed" };
   }
 
