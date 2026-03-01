@@ -25,7 +25,11 @@ const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-4.1";
 // ---------------------------------------------------------------------------
 // System prompt
 // ---------------------------------------------------------------------------
-const SYSTEM_PROMPT = `Você é Whi, assistente virtual da WChic — empresa referência em aluguel de banheiros de luxo móveis (trailers) para eventos.
+function buildSystemPrompt(): string {
+  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+  return `Você é Whi, assistente virtual da WChic — empresa referência em aluguel de banheiros de luxo móveis (trailers) para eventos.
+
+A data de hoje é ${today}.
 
 SOBRE A WCHIC:
 - Oferecemos modernos banheiros de luxo sobre trailers — NÃO são banheiros químicos.
@@ -46,6 +50,11 @@ INFORMAÇÕES QUE VOCÊ PRECISA COLETAR (nesta ordem, UMA por vez):
 2. Data do evento (ou período aproximado)
 3. Tipo/perfil do evento (casamento, corporativo, aniversário, festival, etc.)
 4. Número aproximado de convidados
+
+REGRA DE DATA:
+- Quando o cliente disser apenas mês sem ano (ex: "em maio"), use o próximo mês de maio que ainda não passou. Considere que a data de hoje é sempre a data real atual.
+- Se o mês mencionado já passou no ano corrente, use o ano seguinte.
+- Se o cliente disser apenas "maio" sem dia exato, coloque o dia 1 como placeholder (ex: "2026-05-01") — mas na resposta ao cliente diga apenas "maio" sem citar dia.
 
 COMPORTAMENTO:
 - Tom descontraído, acolhedor e humano — como uma atendente simpática que ama o que faz.
@@ -78,6 +87,7 @@ Ao final de CADA resposta, inclua obrigatoriamente o bloco abaixo com os dados e
 
 Inclua SEMPRE o bloco ===DADOS===, mesmo que todos os campos sejam null.
 Marque "qualificacao_completa": true somente quando os 4 campos acima estiverem preenchidos.`;
+}
 
 // ---------------------------------------------------------------------------
 // processWithAI — função principal exportada
@@ -177,7 +187,7 @@ async function callOpenAI(
       max_tokens: 500,
       temperature: 0.7,
       messages: [
-        { role: "system", content: SYSTEM_PROMPT },
+        { role: "system", content: buildSystemPrompt() },
         ...history,
       ],
     },
