@@ -279,12 +279,20 @@ dashboardRouter.get("/leads/:id", async (req: Request, res: Response) => {
 // ---------------------------------------------------------------------------
 dashboardRouter.get("/franchises", async (_req: Request, res: Response) => {
   try {
-    const result = await query(
-      `SELECT id, franchise_name AS name, podio_workspace_key AS workspace_key FROM franchises ORDER BY franchise_name`
-    );
+    // Tenta com podio_workspace_key primeiro (migration 002), fallback para workspace_key
+    let result;
+    try {
+      result = await query(
+        `SELECT id, franchise_name AS name, podio_workspace_key AS workspace_key FROM franchises ORDER BY franchise_name`
+      );
+    } catch {
+      result = await query(
+        `SELECT id, franchise_name AS name, workspace_key FROM franchises ORDER BY franchise_name`
+      );
+    }
     res.json(result.rows);
   } catch (err: any) {
     logger.error("Dashboard franchises error", { error: err?.message });
-    res.status(500).json({ error: "Erro ao buscar franquias" });
+    res.json([]); // Retorna array vazio em vez de 500
   }
 });
