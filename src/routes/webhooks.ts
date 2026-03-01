@@ -10,6 +10,7 @@ import {
   insertLeadMessage,
   upsertLeadEvent,
 } from "../db/repositories.js";
+import { processWithAI } from "../services/aiService.js";
 import { alert } from "../services/alertService.js";
 
 export const webhookRouter = Router();
@@ -115,7 +116,7 @@ async function processIncomingMessage(msg: IncomingMsg) {
     leadId: lead.id,
     role: "user",
     content: msg.text,
-    stage: "intake",
+    stage: "qualification",
   });
 
   // 3) Upsert evento vazio (cria o registro para roteamento futuro)
@@ -126,6 +127,11 @@ async function processIncomingMessage(msg: IncomingMsg) {
   logger.info("Lead processed from WhatsApp", {
     lead_id: lead.id,
     external_id: lead.external_id,
+  });
+
+  // 4) Chama IA para qualificar e responder (não-bloqueante)
+  processWithAI(lead.id, phoneE164).catch((err) => {
+    logger.error("IA: erro não tratado", { lead_id: lead.id, error: err?.message });
   });
 }
 
