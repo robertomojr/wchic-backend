@@ -98,7 +98,7 @@ dashboardRouter.get("/stats", async (_req: Request, res: Response) => {
     // Por franquia
     const byFranchise = await query(`
       SELECT
-        COALESCE(f.name, 'Não roteado') AS franchise_name,
+        COALESCE(f.franchise_name, 'Não roteado') AS franchise_name,
         f.id AS franchise_id,
         COUNT(*)::int AS total,
         COUNT(*) FILTER (
@@ -110,7 +110,7 @@ dashboardRouter.get("/stats", async (_req: Request, res: Response) => {
       FROM leads l
       LEFT JOIN franchises f ON f.id = l.franchise_id
       LEFT JOIN lead_events le ON le.lead_id = l.id
-      GROUP BY f.id, f.name
+      GROUP BY f.id, f.franchise_name
       ORDER BY total DESC
     `);
 
@@ -190,7 +190,7 @@ dashboardRouter.get("/leads", async (req: Request, res: Response) => {
         l.status,
         l.territory_status,
         l.franchise_id,
-        COALESCE(f.name, 'Não roteado') AS franchise_name,
+        COALESCE(f.franchise_name, 'Não roteado') AS franchise_name,
         l.created_at,
         l.updated_at,
         le.cidade,
@@ -236,7 +236,7 @@ dashboardRouter.get("/leads/:id", async (req: Request, res: Response) => {
     const leadResult = await query(
       `SELECT
         l.*,
-        COALESCE(f.name, 'Não roteado') AS franchise_name,
+        COALESCE(f.franchise_name, 'Não roteado') AS franchise_name,
         le.cidade,
         le.estado,
         le.ibge_code,
@@ -280,7 +280,7 @@ dashboardRouter.get("/leads/:id", async (req: Request, res: Response) => {
 dashboardRouter.get("/franchises", async (_req: Request, res: Response) => {
   try {
     const result = await query(
-      `SELECT id, name, workspace_key FROM franchises ORDER BY name`
+      `SELECT id, franchise_name AS name, podio_workspace_key AS workspace_key FROM franchises ORDER BY franchise_name`
     );
     res.json(result.rows);
   } catch (err: any) {
