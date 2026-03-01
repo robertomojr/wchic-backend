@@ -20,7 +20,7 @@ import { syncLeadToPodio } from "./podioSyncService.js";
 import { logger } from "../utils/logger.js";
 import { alert } from "./alertService.js";
 
-const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-5.2-chat-latest";
+const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-4.1";
 
 // ---------------------------------------------------------------------------
 // System prompt
