@@ -15,6 +15,20 @@ export const app = express();
 app.set("trust proxy", 1); 
 
 /**
+ * CORS — permite o dashboard SPA acessar a API
+ * DEVE ficar antes de tudo (body parser, rate limit) para que
+ * respostas de erro também incluam os headers de CORS.
+ */
+app.use((req, res, next) => {
+  const allowed = process.env.DASHBOARD_URL ?? "*";
+  res.header("Access-Control-Allow-Origin", allowed);
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+});
+
+/**
  * JSON body + rawBody (necessário para WhatsApp Webhook)
  */
 app.use(
@@ -29,18 +43,6 @@ app.use(
  * Rate limit global
  */
 app.use(apiRateLimit);
-
-/**
- * CORS — permite o dashboard SPA acessar a API
- */
-app.use((req, res, next) => {
-  const allowed = process.env.DASHBOARD_URL ?? "*";
-  res.header("Access-Control-Allow-Origin", allowed);
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
-  if (req.method === "OPTIONS") return res.sendStatus(204);
-  next();
-});
 
 /**
  * Health / Home
