@@ -90,14 +90,14 @@ export async function upsertLeadEvent(params: {
     )
     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
     ON CONFLICT (lead_id) DO UPDATE SET
-      cidade = EXCLUDED.cidade,
-      estado = EXCLUDED.estado,
-      ibge_code = EXCLUDED.ibge_code,
-      event_start_date = EXCLUDED.event_start_date,
-      event_end_date = EXCLUDED.event_end_date,
-      perfil_evento_universal = EXCLUDED.perfil_evento_universal,
-      pessoas_estimadas = EXCLUDED.pessoas_estimadas,
-      decisor = EXCLUDED.decisor
+      cidade                 = COALESCE(EXCLUDED.cidade, lead_events.cidade),
+      estado                 = COALESCE(EXCLUDED.estado, lead_events.estado),
+      ibge_code              = COALESCE(EXCLUDED.ibge_code, lead_events.ibge_code),
+      event_start_date       = COALESCE(EXCLUDED.event_start_date, lead_events.event_start_date),
+      event_end_date         = COALESCE(EXCLUDED.event_end_date, lead_events.event_end_date),
+      perfil_evento_universal= COALESCE(EXCLUDED.perfil_evento_universal, lead_events.perfil_evento_universal),
+      pessoas_estimadas      = COALESCE(EXCLUDED.pessoas_estimadas, lead_events.pessoas_estimadas),
+      decisor                = COALESCE(EXCLUDED.decisor, lead_events.decisor)
     `,
     [
       params.leadId,
