@@ -8,6 +8,7 @@ import { podioWebhookRouter } from "./routes/podioWebhook.js";
 import { authRouter } from "./routes/auth.js";
 import { leadsIntake } from "./routes/leadsIntake.js";
 import { leadsRouter } from "./routes/leads.js";
+import { dashboardRouter } from "./routes/dashboard.js";
 
 export const app = express();
 
@@ -28,6 +29,18 @@ app.use(
  * Rate limit global
  */
 app.use(apiRateLimit);
+
+/**
+ * CORS — permite o dashboard SPA acessar a API
+ */
+app.use((req, res, next) => {
+  const allowed = process.env.DASHBOARD_URL ?? "*";
+  res.header("Access-Control-Allow-Origin", allowed);
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+});
 
 /**
  * Health / Home
@@ -71,6 +84,11 @@ app.use("/webhook", podioWebhookRouter);
  */
 app.use("/leads", leadsRouter);
 app.use("/auth", authRouter);
+
+/**
+ * Dashboard (Tarefa #14)
+ */
+app.use("/dash", dashboardRouter);
 
 /**
  * Handler global de erro (sempre por último)
